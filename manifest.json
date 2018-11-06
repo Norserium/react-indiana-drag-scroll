@@ -1,6 +1,6 @@
 {
-  "short_name": "react-indiana-drag-scroller",
-  "name": "react-indiana-drag-scroller",
+  "short_name": "react-indiana-drag-scroll",
+  "name": "react-indiana-drag-scroll",
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",
