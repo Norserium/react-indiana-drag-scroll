@@ -1,0 +1,8 @@
+.indiana-scroll-container--dragging {
+  pointer-events: none;
+  cursor: grab;
+}
+
+.indiana-dragging {
+  cursor: grab !important;
+}
