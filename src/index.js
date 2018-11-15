@@ -15,8 +15,8 @@ export default class ScrollContainer extends Component {
     hideScrollbars: PropTypes.bool,
     activationDistance: PropTypes.number,
     children: PropTypes.node,
-    onScroll: PropTypes.func,
     onStartScroll: PropTypes.func,
+    onScroll: PropTypes.func,
     onEndScroll: PropTypes.func,
     className: PropTypes.string,
     style: PropTypes.object

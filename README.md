@@ -1,4 +1,4 @@
-# React Indiana Drag Scroller
+# React Indiana Drag Scroll
 
 > Implements scroll on drag
 
@@ -19,6 +19,7 @@ npm install --save react-indiana-drag-scroller
 ## Usage
 
 ```jsx
+import React, { Component } from 'react'
 import React, { Component } from 'react'
 
 import ScrollContainer from 'react-indiana-drag-scroll'
@@ -45,7 +46,7 @@ class Example extends Component {
 | children               | Node             | The content of scrolling container                             |
 | onScroll               | Function         | Invoked when user scrolling container                          |
 | onEndScroll            | Function         | Invoked when user ends scrolling container                     |
-| onStartScroll          | Function         | Invoked when user starts scrolling container                     |
+| onStartScroll          | Function         | Invoked when user starts scrolling container                   |
 | className              | String           | The custom classname for container                             |        
 | style                  | Number           | The custom styles for container                                |  
 
