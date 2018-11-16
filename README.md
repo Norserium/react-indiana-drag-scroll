@@ -16,6 +16,10 @@ Try it yourself! Go to [demo website](https://norserium.github.io/react-indiana-
 npm install --save react-indiana-drag-scroll
 ```
 
+```bash
+yarn add react-indiana-drag-scroll
+```
+
 ## Usage
 
 ```jsx
