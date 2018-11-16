@@ -24,7 +24,6 @@ yarn add react-indiana-drag-scroll
 
 ```jsx
 import React, { Component } from 'react'
-import React, { Component } from 'react'
 
 import ScrollContainer from 'react-indiana-drag-scroll'
 
