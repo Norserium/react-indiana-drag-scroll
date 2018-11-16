@@ -13,7 +13,7 @@ Try it yourself! Go to [demo website](https://norserium.github.io/react-indiana-
 ## Install
 
 ```bash
-npm install --save react-indiana-drag-scroller
+npm install --save react-indiana-drag-scroll
 ```
 
 ## Usage
