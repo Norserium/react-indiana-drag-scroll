@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
 import classnames from 'classnames'
-import { bem } from './helpers/bem'
+import bem from 'easy-bem'
 
 import './style.css'
 

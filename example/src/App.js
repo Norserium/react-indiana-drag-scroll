@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-
-import bem from './helpers/bem'
-
+import bem from 'easy-bem'
 import ScrollContainer from 'react-indiana-drag-scroll'
-import Hieroglyph from './Hieroglyph';
+
+import Hieroglyph from './Hieroglyph'
 
 const centeredBlock = bem('centered-block')
 
@@ -21,23 +20,22 @@ const hieroglyphs = [
   require('./images/Hieroglyphs/11.svg'),
   require('./images/Hieroglyphs/12.svg'),
   require('./images/Hieroglyphs/13.svg'),
-  require('./images/Hieroglyphs/14.svg'),
-];
+  require('./images/Hieroglyphs/14.svg')
+]
 
 export default class App extends Component {
   constructor(props) {
     super(props)
-    this.state = {hiddenHieroglyphs: []};
+    this.state = {hiddenHieroglyphs: []}
   }
   render () {
-    
     return (
       <div>
         <div className={centeredBlock()}>
           <div className={centeredBlock('container')}>
-            <ScrollContainer className="scroll-container">
-              <div className="hieroglyphs"> 
-                {hieroglyphs.map((src,index) => <Hieroglyph key={index} src={src}/>)}
+            <ScrollContainer className='scroll-container'>
+              <div className='hieroglyphs'>
+                {hieroglyphs.map((src, index) => <Hieroglyph key={index} src={src} />)}
               </div>
             </ScrollContainer>
           </div>

@@ -1,6 +1,6 @@
 {
   "name": "react-indiana-drag-scroll",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Implements scroll on drag",
   "author": "Norserium",
   "license": "MIT",
@@ -66,6 +66,7 @@
     "dist"
   ],
   "dependencies": {
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "easy-bem": "^1.0.0"
   }
 }
