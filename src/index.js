@@ -164,7 +164,7 @@ export default class ScrollContainer extends Component {
     return (
       <div
         className={classnames(className, cn({ dragging: this.dragging }))}
-        style={{ ...style, overflow: hideScrollbars ? 'hidden' : 'overflow' }}
+        style={{ ...style, overflow: hideScrollbars ? 'hidden' : 'auto' }}
         ref={this.container}
         onTouchStart={this.onTouchStart}
         onMouseDown={this.onMouseDown}
