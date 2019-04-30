@@ -13,6 +13,7 @@ export default class ScrollContainer extends Component {
     horizontal: PropTypes.bool,
     hideScrollbars: PropTypes.bool,
     activationDistance: PropTypes.number,
+    excludedTagList: PropTypes.array,
     children: PropTypes.node,
     onStartScroll: PropTypes.func,
     onScroll: PropTypes.func,
@@ -24,6 +25,7 @@ export default class ScrollContainer extends Component {
   static defaultProps = {
     hideScrollbars: true,
     activationDistance: 10,
+    excludedTagList: [],
     vertical: true,
     horizontal: true,
     style: {}
@@ -57,6 +59,7 @@ export default class ScrollContainer extends Component {
     this.pressed = true
     this.clientX = touch.clientX
     this.clientY = touch.clientY
+    this.updateExcludedTagStatus()
 
     e.stopPropagation()
   }
@@ -81,6 +84,7 @@ export default class ScrollContainer extends Component {
     this.pressed = true
     this.clientX = e.clientX
     this.clientY = e.clientY
+    this.updateExcludedTagStatus()
 
     e.stopPropagation()
   };
@@ -107,6 +111,8 @@ export default class ScrollContainer extends Component {
     const {
       horizontal, vertical, activationDistance, onScroll, onStartScroll
     } = this.props
+
+    if (this.preventExcludedMove) { return }
 
     const container = this.container.current
 
@@ -146,6 +152,7 @@ export default class ScrollContainer extends Component {
 
     this.pressed = false
     this.dragging = false
+    this.preventExcludedMove = false
 
     document.body.classList.remove('indiana-dragging')
 
@@ -154,6 +161,17 @@ export default class ScrollContainer extends Component {
     }
 
     this.forceUpdate()
+  }
+
+  updateExcludedTagStatus() {
+    const { excludedTagList } = this.props
+
+    if (e.target.tagName) {
+      // prevent dragging if it started with clicking/touching excluded tag
+      if (excludedTagList.includes(e.target.tagName.toLowerCase())) {
+        this.preventExcludedMove = true;
+      }
+    }
   }
 
   render() {
