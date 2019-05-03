@@ -18,7 +18,8 @@ export default class ScrollContainer extends Component {
     onScroll: PropTypes.func,
     onEndScroll: PropTypes.func,
     className: PropTypes.string,
-    style: PropTypes.object
+    style: PropTypes.object,
+    ignoreElements: PropTypes.string
   }
 
   static defaultProps = {
@@ -48,17 +49,28 @@ export default class ScrollContainer extends Component {
     window.removeEventListener('touchend', this.onTouchEnd)
   }
 
+  isDraggable(target) {
+    const ignoreElements = this.props.ignoreElements
+    if (ignoreElements) {
+      const closest = target.closest(ignoreElements)
+      return closest === null || closest.contains(this.getElement())
+    } else {
+      return true
+    }
+  }
+
   getElement() {
     return this.container.current
   }
 
   onTouchStart = (e) => {
-    const touch = e.touches[0]
-    this.pressed = true
-    this.clientX = touch.clientX
-    this.clientY = touch.clientY
-
-    e.stopPropagation()
+    if (this.isDraggable(e.target)) {
+      const touch = e.touches[0]
+      this.pressed = true
+      this.clientX = touch.clientX
+      this.clientY = touch.clientY
+      e.stopPropagation()
+    }
   }
 
   onTouchEnd = (e) => {
@@ -78,11 +90,13 @@ export default class ScrollContainer extends Component {
   }
 
   onMouseDown = (e) => {
-    this.pressed = true
-    this.clientX = e.clientX
-    this.clientY = e.clientY
+    if (this.isDraggable(e.target)) {
+      this.pressed = true
+      this.clientX = e.clientX
+      this.clientY = e.clientY
 
-    e.stopPropagation()
+      e.stopPropagation()
+    }
   };
 
   onMouseMove = (e) => {
