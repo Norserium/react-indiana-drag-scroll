@@ -52,7 +52,7 @@ class Example extends Component {
 | onStartScroll      | Function | Invoked when user starts scrolling container                                              |
 | className          | String   | The custom classname for container                                                        |
 | style              | Number   | The custom styles for container                                                           |
-| ignoreElements     | String   | Elements within that should not trigger the scrolling behaviour, such as ".modal, dialog" |
+| ignoreElements     | String   | Selector for elements that should not trigger the scrolling behaviour (for example, ".modal, dialog" or "\*[prevent-drag-scroll]") |
 
 ## License
 
