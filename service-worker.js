@@ -1,1 +1,34 @@
-"use strict";var precacheConfig=[["/react-indiana-drag-scroll/index.html","16d442595165256f44819944812031d9"],["/react-indiana-drag-scroll/static/css/main.f602904c.css","3001db6857174eb0c0f7fb5fd471de88"],["/react-indiana-drag-scroll/static/js/main.d827d87e.js","5fa8d983874aefb3b007af67a785dc1d"],["/react-indiana-drag-scroll/static/media/1.e29a7e6e.svg","e29a7e6e7034c9a86c1711ab4912dc22"],["/react-indiana-drag-scroll/static/media/10.d77908dd.svg","d77908ddb7a3c95748d4e71e4c8d79f6"],["/react-indiana-drag-scroll/static/media/11.70ad57f8.svg","70ad57f87ffe9b7cba40fc05757e3224"],["/react-indiana-drag-scroll/static/media/12.9be3a39b.svg","9be3a39be373f2d1f697e751484af55b"],["/react-indiana-drag-scroll/static/media/13.4d9ae7f2.svg","4d9ae7f2f6eeeaf37356941e4600fe80"],["/react-indiana-drag-scroll/static/media/14.ba7247af.svg","ba7247afd97f35d66feec031503ace5d"],["/react-indiana-drag-scroll/static/media/2.d0377698.svg","d03776989c338783bfd806b14b7d04e8"],["/react-indiana-drag-scroll/static/media/3.cea50674.svg","cea50674290cf4660fbb553f746051e2"],["/react-indiana-drag-scroll/static/media/4.771dc278.svg","771dc2788a61da682cc1c2d7b642d53f"],["/react-indiana-drag-scroll/static/media/5.a5929661.svg","a59296611e60158115006b8dd205439e"],["/react-indiana-drag-scroll/static/media/6.764257ff.svg","764257ffa23d281eba3f2b590272858f"],["/react-indiana-drag-scroll/static/media/7.f6ff5731.svg","f6ff5731f3c2a9b6fc64192bc0e12cd7"],["/react-indiana-drag-scroll/static/media/8.3712db90.svg","3712db9050f3094c46cfeb5e902339c9"],["/react-indiana-drag-scroll/static/media/9.4dbdae24.svg","4dbdae240bbca021e2ee3435d5095555"],["/react-indiana-drag-scroll/static/media/Man.486abb77.svg","486abb776386b858d48a1ec89e6437b5"]],cacheName="sw-precache-v3-sw-precache-webpack-plugin-"+(self.registration?self.registration.scope:""),ignoreUrlParametersMatching=[/^utm_/],addDirectoryIndex=function(e,a){var t=new URL(e);return"/"===t.pathname.slice(-1)&&(t.pathname+=a),t.toString()},cleanResponse=function(a){return a.redirected?("body"in a?Promise.resolve(a.body):a.blob()).then(function(e){return new Response(e,{headers:a.headers,status:a.status,statusText:a.statusText})}):Promise.resolve(a)},createCacheKey=function(e,a,t,r){var n=new URL(e);return r&&n.pathname.match(r)||(n.search+=(n.search?"&":"")+encodeURIComponent(a)+"="+encodeURIComponent(t)),n.toString()},isPathWhitelisted=function(e,a){if(0===e.length)return!0;var t=new URL(a).pathname;return e.some(function(e){return t.match(e)})},stripIgnoredUrlParameters=function(e,t){var a=new URL(e);return a.hash="",a.search=a.search.slice(1).split("&").map(function(e){return e.split("=")}).filter(function(a){return t.every(function(e){return!e.test(a[0])})}).map(function(e){return e.join("=")}).join("&"),a.toString()},hashParamName="_sw-precache",urlsToCacheKeys=new Map(precacheConfig.map(function(e){var a=e[0],t=e[1],r=new URL(a,self.location),n=createCacheKey(r,hashParamName,t,/\.\w{8}\./);return[r.toString(),n]}));function setOfCachedUrls(e){return e.keys().then(function(e){return e.map(function(e){return e.url})}).then(function(e){return new Set(e)})}self.addEventListener("install",function(e){e.waitUntil(caches.open(cacheName).then(function(r){return setOfCachedUrls(r).then(function(t){return Promise.all(Array.from(urlsToCacheKeys.values()).map(function(a){if(!t.has(a)){var e=new Request(a,{credentials:"same-origin"});return fetch(e).then(function(e){if(!e.ok)throw new Error("Request for "+a+" returned a response with status "+e.status);return cleanResponse(e).then(function(e){return r.put(a,e)})})}}))})}).then(function(){return self.skipWaiting()}))}),self.addEventListener("activate",function(e){var t=new Set(urlsToCacheKeys.values());e.waitUntil(caches.open(cacheName).then(function(a){return a.keys().then(function(e){return Promise.all(e.map(function(e){if(!t.has(e.url))return a.delete(e)}))})}).then(function(){return self.clients.claim()}))}),self.addEventListener("fetch",function(a){if("GET"===a.request.method){var e,t=stripIgnoredUrlParameters(a.request.url,ignoreUrlParametersMatching),r="index.html";(e=urlsToCacheKeys.has(t))||(t=addDirectoryIndex(t,r),e=urlsToCacheKeys.has(t));var n="/react-indiana-drag-scroll/index.html";!e&&"navigate"===a.request.mode&&isPathWhitelisted(["^(?!\\/__).*"],a.request.url)&&(t=new URL(n,self.location).toString(),e=urlsToCacheKeys.has(t)),e&&a.respondWith(caches.open(cacheName).then(function(e){return e.match(urlsToCacheKeys.get(t)).then(function(e){if(e)return e;throw Error("The cached response that was expected is missing.")})}).catch(function(e){return console.warn('Couldn\'t serve response for "%s" from cache: %O',a.request.url,e),fetch(a.request)}))}});
+/**
+ * Welcome to your Workbox-powered service worker!
+ *
+ * You'll need to register this file in your web app and you should
+ * disable HTTP caching for this file too.
+ * See https://goo.gl/nhQhGp
+ *
+ * The rest of the code is auto-generated. Please don't update this file
+ * directly; instead, make changes to your Workbox build configuration
+ * and re-run your build process.
+ * See https://goo.gl/2aRDsh
+ */
+
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+
+importScripts(
+  "/react-indiana-drag-scroll/precache-manifest.e82e7d5e572ce0c2cbcb6dc49266cb3c.js"
+);
+
+workbox.clientsClaim();
+
+/**
+ * The workboxSW.precacheAndRoute() method efficiently caches and responds to
+ * requests for URLs in the manifest.
+ * See https://goo.gl/S9QRab
+ */
+self.__precacheManifest = [].concat(self.__precacheManifest || []);
+workbox.precaching.suppressWarnings();
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+
+workbox.routing.registerNavigationRoute("/react-indiana-drag-scroll/index.html", {
+  
+  blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
+});
