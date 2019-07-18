@@ -38,7 +38,7 @@ export default class ScrollContainer extends Component {
   componentDidMount() {
     window.addEventListener('mouseup', this.onMouseUp)
     window.addEventListener('mousemove', this.onMouseMove)
-    window.addEventListener('touchmove', this.onTouchMove)
+    window.addEventListener('touchmove', this.onTouchMove, {passive: false})
     window.addEventListener('touchend', this.onTouchEnd)
   }
 
