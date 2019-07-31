@@ -94,8 +94,10 @@ export default class ScrollContainer extends Component {
       this.pressed = true
       this.clientX = e.clientX
       this.clientY = e.clientY
-
       e.stopPropagation()
+      if (e.preventDefault) {
+        e.preventDefault()
+      }
     }
   };
 
@@ -113,7 +115,6 @@ export default class ScrollContainer extends Component {
       e.preventDefault()
     }
     e.stopPropagation()
-
     this.processEnd()
   };
 
