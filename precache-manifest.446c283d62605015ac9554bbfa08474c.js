@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/react-indiana-drag-scroll/static/js/runtime~main.1a3eacaa.js"
   },
   {
-    "revision": "b071bea435498b221fda",
-    "url": "/react-indiana-drag-scroll/static/js/2.27753e3f.chunk.js"
+    "revision": "42df3876e0d405fdb345",
+    "url": "/react-indiana-drag-scroll/static/js/2.0af462c3.chunk.js"
   },
   {
     "revision": "e29a7e6e7034c9a86c1711ab4912dc22",
@@ -76,7 +76,7 @@ self.__precacheManifest = [
     "url": "/react-indiana-drag-scroll/static/media/Man.486abb77.svg"
   },
   {
-    "revision": "edd7f2c99109c839844c4985819a3af1",
+    "revision": "66e8983c9b87931b70200b967de7b2fe",
     "url": "/react-indiana-drag-scroll/index.html"
   }
 ];
