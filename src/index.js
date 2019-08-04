@@ -40,6 +40,15 @@ export default class ScrollContainer extends Component {
     window.addEventListener('mousemove', this.onMouseMove)
     window.addEventListener('touchmove', this.onTouchMove, {passive: false})
     window.addEventListener('touchend', this.onTouchEnd)
+
+    // We should check if it's the mobile device after page was loaded
+    // to prevent breaking SSR
+    this.isMobile = this.isMobileDevice()
+
+    // If it's the mobile device, we should rerender to change styles
+    if (this.isMobile) {
+      this.forceUpdate()
+    }
   }
 
   componentWillUnmount() {
@@ -47,6 +56,10 @@ export default class ScrollContainer extends Component {
     window.removeEventListener('mousemove', this.onMouseMove)
     window.removeEventListener('touchmove', this.onTouchMove)
     window.removeEventListener('touchend', this.onTouchEnd)
+  }
+
+  isMobileDevice() {
+    return (typeof window.orientation !== 'undefined') || (navigator.userAgent.indexOf('IEMobile') !== -1)
   }
 
   isDraggable(target) {
@@ -81,10 +94,7 @@ export default class ScrollContainer extends Component {
     if (this.pressed) {
       const touch = e.touches[0]
       if (touch) {
-        this.processMove(touch.clientX, touch.clientY)
-        if (e.preventDefault) {
-          e.preventDefault()
-        }
+        this.processMove(e, touch.clientX, touch.clientY)
       }
     }
   }
@@ -103,7 +113,7 @@ export default class ScrollContainer extends Component {
 
   onMouseMove = (e) => {
     if (this.pressed) {
-      this.processMove(e.clientX, e.clientY, e)
+      this.processMove(e, e.clientX, e.clientY)
       if (e.preventDefault) {
         e.preventDefault()
       }
@@ -118,57 +128,57 @@ export default class ScrollContainer extends Component {
     this.processEnd()
   };
 
-  processMove(newClientX, newClientY) {
+  processMove(event, newClientX, newClientY) {
     const {
       horizontal, vertical, activationDistance, onScroll, onStartScroll
     } = this.props
-
     const container = this.container.current
 
+    const isTouch = event.type === 'touchmove'
+
     if (!this.dragging && this.pressed) {
-      if ((horizontal && Math.abs(newClientX - this.clientX) > activationDistance) || (vertical && Math.abs(newClientY - this.clientY) > activationDistance)) {
+      if (isTouch || ((horizontal && Math.abs(newClientX - this.clientX) > activationDistance) || (vertical && Math.abs(newClientY - this.clientY) > activationDistance))) {
         this.clientX = newClientX
         this.clientY = newClientY
         this.dragging = true
         document.body.classList.add('indiana-dragging')
         if (onStartScroll) {
-          onStartScroll()
+          onStartScroll(container.scrollLeft, container.scrollTop, container.scrollWidth, container.scrollHeight)
         }
-        this.forceUpdate()
+        if (!isTouch) {
+          this.forceUpdate()
+        }
       }
     }
     if (this.dragging) {
-      if (horizontal) {
-        container.scrollLeft -= newClientX - this.clientX
+      if (!isTouch) {
+        if (horizontal) {
+          container.scrollLeft -= newClientX - this.clientX
+        }
+        if (vertical) {
+          container.scrollTop -= newClientY - this.clientY
+        }
       }
-      if (vertical) {
-        container.scrollTop -= newClientY - this.clientY
-      }
-
       if (onScroll) {
         onScroll(container.scrollLeft, container.scrollTop, container.scrollWidth, container.scrollHeight)
       }
-
       this.clientX = newClientX
       this.clientY = newClientY
     }
   }
 
   processEnd() {
-    const { onEndScroll } = this.props
-
-    const container = this.container.current
-
-    this.pressed = false
-    this.dragging = false
-
-    document.body.classList.remove('indiana-dragging')
-
-    if (onEndScroll) {
-      onEndScroll(container.scrollLeft, container.scrollTop, container.scrollWidth, container.scrollHeight)
+    if (this.dragging || this.pressed) {
+      const { onEndScroll } = this.props
+      const container = this.container.current
+      this.pressed = false
+      this.dragging = false
+      document.body.classList.remove('indiana-dragging')
+      if (onEndScroll) {
+        onEndScroll(container.scrollLeft, container.scrollTop, container.scrollWidth, container.scrollHeight)
+      }
+      this.forceUpdate()
     }
-
-    this.forceUpdate()
   }
 
   render() {
@@ -178,8 +188,12 @@ export default class ScrollContainer extends Component {
 
     return (
       <div
-        className={classnames(className, cn({ dragging: this.dragging }))}
-        style={{ ...style, overflow: hideScrollbars ? 'hidden' : 'auto' }}
+        className={classnames(className, cn({
+          'dragging': this.dragging,
+          'hide-scrollbars': hideScrollbars,
+          'mobile': this.isMobile
+        }))}
+        style={style}
         ref={this.container}
         onTouchStart={this.onTouchStart}
         onMouseDown={this.onMouseDown}

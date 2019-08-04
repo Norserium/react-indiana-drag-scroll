@@ -4,7 +4,8 @@ import external from 'rollup-plugin-peer-deps-external'
 import postcss from 'rollup-plugin-postcss'
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
-
+import autoprefixer from 'autoprefixer'
+import nestedRules from 'postcss-nested'
 import pkg from './package.json'
 
 export default {
@@ -23,7 +24,10 @@ export default {
   ],
   plugins: [
     external(),
-    postcss(),
+    postcss({
+      plugins: [autoprefixer, nestedRules],
+      inject: true
+    }),
     url(),
     babel({
       exclude: 'node_modules/**',

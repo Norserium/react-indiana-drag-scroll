@@ -1,6 +1,24 @@
-.indiana-scroll-container--dragging {
-  pointer-events: none;
-  cursor: grab;
+.indiana-scroll-container {
+  overflow: hidden;
+  &--dragging {
+    pointer-events: none;
+    cursor: grab;
+  }
+  &--mobile {
+    overflow: auto;
+  }
+  &--hide-scrollbars {
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none !important;
+      height: 0 !important;
+      width: 0 !important;
+      background: transparent !important;
+      -webkit-appearance: none !important;
+    }
+  }
 }
 
 .indiana-dragging {
