@@ -53,6 +53,7 @@ class Example extends Component {
 | className          | String   | The custom classname for container                                                        |
 | style              | Number   | The custom styles for container                                                           |
 | ignoreElements     | String   | Selector for elements that should not trigger the scrolling behaviour (for example, ".modal, dialog" or "\*[prevent-drag-scroll]") |
+| nativeMobileScroll | Bool     | Use native mobile drag scroll for mobile devices                                          | true
 
 ## License
 

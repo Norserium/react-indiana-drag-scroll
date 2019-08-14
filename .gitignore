@@ -21,4 +21,4 @@ dist
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-example/package-json.lock
+example/package-lock.json
