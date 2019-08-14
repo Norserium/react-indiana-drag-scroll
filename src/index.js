@@ -19,10 +19,12 @@ export default class ScrollContainer extends Component {
     onEndScroll: PropTypes.func,
     className: PropTypes.string,
     style: PropTypes.object,
-    ignoreElements: PropTypes.string
+    ignoreElements: PropTypes.string,
+    preserveMobileBehavior: PropTypes.bool
   }
 
   static defaultProps = {
+    preserveMobileBehavior: true,
     hideScrollbars: true,
     activationDistance: 10,
     vertical: true,
@@ -36,18 +38,22 @@ export default class ScrollContainer extends Component {
   }
 
   componentDidMount() {
+    const {preserveMobileBehavior} = this.props
+
     window.addEventListener('mouseup', this.onMouseUp)
     window.addEventListener('mousemove', this.onMouseMove)
     window.addEventListener('touchmove', this.onTouchMove, {passive: false})
     window.addEventListener('touchend', this.onTouchEnd)
 
-    // We should check if it's the mobile device after page was loaded
-    // to prevent breaking SSR
-    this.isMobile = this.isMobileDevice()
+    if (preserveMobileBehavior) {
+      // We should check if it's the mobile device after page was loaded
+      // to prevent breaking SSR
+      this.isMobile = this.isMobileDevice()
 
-    // If it's the mobile device, we should rerender to change styles
-    if (this.isMobile) {
-      this.forceUpdate()
+      // If it's the mobile device, we should rerender to change styles
+      if (this.isMobile) {
+        this.forceUpdate()
+      }
     }
   }
 
@@ -87,7 +93,11 @@ export default class ScrollContainer extends Component {
   }
 
   onTouchEnd = (e) => {
-    this.processEnd()
+    if (this.dragging) {
+      this.processEnd()
+    } else if (this.pressed) {
+      this.pressed = false
+    }
   };
 
   onTouchMove = (e) => {
@@ -121,11 +131,17 @@ export default class ScrollContainer extends Component {
   }
 
   onMouseUp = (e) => {
-    if (e.preventDefault) {
-      e.preventDefault()
+    if (this.pressed || this.dragging) {
+      if (e.preventDefault) {
+        e.preventDefault()
+      }
+      e.stopPropagation()
+      if (this.dragging) {
+        this.processEnd()
+      } else {
+        this.pressed = false
+      }
     }
-    e.stopPropagation()
-    this.processEnd()
   };
 
   processMove(event, newClientX, newClientY) {
@@ -168,17 +184,15 @@ export default class ScrollContainer extends Component {
   }
 
   processEnd() {
-    if (this.dragging || this.pressed) {
-      const { onEndScroll } = this.props
-      const container = this.container.current
-      this.pressed = false
-      this.dragging = false
-      document.body.classList.remove('indiana-dragging')
-      if (onEndScroll) {
-        onEndScroll(container.scrollLeft, container.scrollTop, container.scrollWidth, container.scrollHeight)
-      }
-      this.forceUpdate()
+    const { onEndScroll } = this.props
+    const container = this.container.current
+    if (this.dragging && onEndScroll) {
+      onEndScroll(container.scrollLeft, container.scrollTop, container.scrollWidth, container.scrollHeight)
     }
+    document.body.classList.remove('indiana-dragging')
+    this.pressed = false
+    this.dragging = false
+    this.forceUpdate()
   }
 
   render() {

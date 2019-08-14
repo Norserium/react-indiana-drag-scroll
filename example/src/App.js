@@ -33,7 +33,11 @@ export default class App extends Component {
       <div>
         <div className={centeredBlock()}>
           <div className={centeredBlock('container')}>
-            <ScrollContainer className='scroll-container'>
+            <ScrollContainer className='scroll-container'
+              onStartScroll={(...args) => { console.log('onStartScroll', args) }}
+              onScroll={(...args) => { console.log('onScroll', args) }}
+              onEndScroll={(...args) => { console.log('onEndScroll', args) }}
+            >
               <div className='hieroglyphs'>
                 {hieroglyphs.map((src, index) => <Hieroglyph key={index} src={src} />)}
               </div>
