@@ -96,6 +96,11 @@ export default class ScrollContainer extends Component {
   }
 
   onScroll = (e) => {
+    const container = this.container.current
+    // Ignore the internal scrolls
+    if (container.scrollLeft === this.scrollLeft && container.scrollTop === this.scrollTop) {
+      return
+    }
     if (!this.isMobile && !this.started && !this.scrolling) {
       this.processStart(e, false)
     }
@@ -249,6 +254,9 @@ export default class ScrollContainer extends Component {
       }
       this.clientX = newClientX
       this.clientY = newClientY
+
+      this.scrollLeft = container.scrollLeft
+      this.scrollTop = container.scrollTop
     }
   }
 
