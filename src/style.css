@@ -1,13 +1,11 @@
 .indiana-scroll-container {
-  overflow: hidden;
+  overflow: auto;
   &--dragging {
     pointer-events: none;
     cursor: grab;
   }
-  &--mobile {
-    overflow: auto;
-  }
   &--hide-scrollbars {
+    overflow: hidden;
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -18,6 +16,9 @@
       background: transparent !important;
       -webkit-appearance: none !important;
     }
+  }
+  &--native-scroll {
+    overflow: auto;
   }
 }
 

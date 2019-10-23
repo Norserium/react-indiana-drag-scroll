@@ -8,7 +8,7 @@ import './style.css'
 
 const cn = bem('indiana-scroll-container')
 
-const SCROLL_END_DEBOUNCE = 150
+const SCROLL_END_DEBOUNCE = 300
 
 export default class ScrollContainer extends Component {
   static propTypes = {
@@ -23,7 +23,7 @@ export default class ScrollContainer extends Component {
     className: PropTypes.string,
     style: PropTypes.object,
     ignoreElements: PropTypes.string,
-    nativeMobileScroll: PropTypes.bool
+    nativeMobileScroll: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -96,12 +96,12 @@ export default class ScrollContainer extends Component {
   }
 
   onScroll = (e) => {
-    const {nativeMobileScroll} = this.props
-    this.scrolling = true
-    if (nativeMobileScroll && this.isMobile) {
-      this.processScroll(e)
-      this.onEndScroll()
+    if (!this.isMobile && !this.started && !this.scrolling) {
+      this.processStart()
     }
+    this.scrolling = true
+    this.processScroll(e)
+    this.onEndScroll()
   }
 
   // Simulate 'onEndScroll' event
@@ -276,7 +276,7 @@ export default class ScrollContainer extends Component {
         className={classnames(className, cn({
           'dragging': this.pressed,
           'hide-scrollbars': hideScrollbars,
-          'mobile': this.isMobile
+          'native-scroll': this.isMobile
         }))}
         style={style}
         ref={this.container}
