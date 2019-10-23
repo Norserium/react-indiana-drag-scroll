@@ -97,7 +97,7 @@ export default class ScrollContainer extends Component {
 
   onScroll = (e) => {
     if (!this.isMobile && !this.started && !this.scrolling) {
-      this.processStart()
+      this.processStart(e, false)
     }
     this.scrolling = true
     this.processScroll(e)
@@ -122,7 +122,6 @@ export default class ScrollContainer extends Component {
         const touch = e.touches[0]
         this.processClick(e, touch.clientX, touch.clientY)
         if (!nativeMobileScroll) {
-          e.preventDefault()
           e.stopPropagation()
         }
       }
@@ -194,12 +193,14 @@ export default class ScrollContainer extends Component {
     this.pressed = true
   }
 
-  processStart(e) {
+  processStart(e, changeCursor=true) {
     const { onStartScroll } = this.props
     const container = this.container.current
 
     // Add the class to display a cursor
-    document.body.classList.add('indiana-dragging')
+    if (changeCursor) {
+      document.body.classList.add('indiana-dragging')
+    }
 
     this.started = true
     if (onStartScroll) {
