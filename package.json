@@ -1,6 +1,6 @@
 {
   "name": "react-indiana-drag-scroll",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Implements scroll on drag",
   "author": "Norserium",
   "license": "MIT",
@@ -8,6 +8,7 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
+  "types": "types/index.d.ts",
   "keywords": [
     "react",
     "drag",
@@ -65,7 +66,8 @@
     "rollup-plugin-url": "^1.4.0"
   },
   "files": [
-    "dist"
+    "dist",
+    "types/index.d.ts"
   ],
   "dependencies": {
     "classnames": "^2.2.6",
