@@ -1,5 +1,11 @@
 .indiana-scroll-container {
   overflow: auto;
+  &--dragging {
+    > * {
+      pointer-events: none;
+      cursor: grab;
+    }
+  }
   &--hide-scrollbars {
     overflow: hidden;
     overflow: -moz-scrollbars-none;

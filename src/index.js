@@ -139,6 +139,7 @@ export default class ScrollContainer extends PureComponent {
       } else {
         this.pressed = false
       }
+      this.forceUpdate()
     }
   };
 
@@ -206,7 +207,7 @@ export default class ScrollContainer extends PureComponent {
     if (onStartScroll) {
       onStartScroll(container.scrollLeft, container.scrollTop, container.scrollWidth, container.scrollHeight)
     }
-    container.classList.add(cn('dragging'))
+    this.forceUpdate()
   }
 
   // Process native scroll (scrollbar, mobile scroll)
@@ -258,14 +259,10 @@ export default class ScrollContainer extends PureComponent {
     this.started = false
     this.scrolling = false
 
-    document.body.classList.remove('indiana-dragging')
-
-    if (container) {
-      if (onEndScroll) {
-        onEndScroll(container.scrollLeft, container.scrollTop, container.scrollWidth, container.scrollHeight)
-      }
-      container.classList.remove(cn('dragging'))
+    if (container && onEndScroll) {
+      onEndScroll(container.scrollLeft, container.scrollTop, container.scrollWidth, container.scrollHeight)
     }
+    this.forceUpdate()
   }
 
   render() {
@@ -276,6 +273,7 @@ export default class ScrollContainer extends PureComponent {
     return (
       <div
         className={classnames(className, cn({
+          'dragging': this.pressed,
           'hide-scrollbars': hideScrollbars,
           'native-scroll': this.isMobile
         }))}
