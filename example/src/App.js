@@ -1,49 +1,48 @@
 import React, { Component } from 'react'
 import bem from 'easy-bem'
-import ScrollContainer from 'react-indiana-drag-scroll'
+import Indiana from './Indiana'
+import Scrollbars from './Scrollbars'
+import Image from './Image'
 
-import Hieroglyph from './Hieroglyph'
-
-const centeredBlock = bem('centered-block')
-
-const hieroglyphs = [
-  require('./images/Hieroglyphs/1.svg'),
-  require('./images/Hieroglyphs/2.svg'),
-  require('./images/Hieroglyphs/3.svg'),
-  require('./images/Hieroglyphs/4.svg'),
-  require('./images/Hieroglyphs/5.svg'),
-  require('./images/Hieroglyphs/6.svg'),
-  require('./images/Hieroglyphs/7.svg'),
-  require('./images/Hieroglyphs/8.svg'),
-  require('./images/Hieroglyphs/9.svg'),
-  require('./images/Hieroglyphs/10.svg'),
-  require('./images/Hieroglyphs/11.svg'),
-  require('./images/Hieroglyphs/12.svg'),
-  require('./images/Hieroglyphs/13.svg'),
-  require('./images/Hieroglyphs/14.svg')
-]
+const cn = bem('example-application')
 
 export default class App extends Component {
   constructor(props) {
     super(props)
-    this.state = {hiddenHieroglyphs: []}
+    this.examples = [
+      {
+        element: <Indiana />,
+        title: 'Example with default options'
+      },
+      {
+        element: <Scrollbars />,
+        title: 'Example with scrollbars'
+      },
+      {
+        element: <Image />,
+        title: 'Example with non-native mobile scrolling'
+      }
+    ]
+    this.state = { currentExample: 0 }
   }
+
   render () {
+    const {currentExample} = this.state
     return (
-      <div>
-        <div className={centeredBlock()}>
-          <div className={centeredBlock('container')}>
-            <ScrollContainer className='scroll-container'
-              onStartScroll={(...args) => { console.log('onStartScroll', args) }}
-              onScroll={(...args) => { console.log('onScroll', args) }}
-              onEndScroll={(...args) => { console.log('onEndScroll', args) }}
+      <div className={cn()}>
+        <div className={cn('container')}>
+          {this.examples[currentExample].element}
+        </div>
+        <div className={cn('pages')}>
+          {this.examples.map((el, index) => (
+            <span
+              title={el.title}
+              className={cn('page', {active: index === currentExample})}
+              onClick={() => this.setState({currentExample: index})}
             >
-              <div className='hieroglyphs'>
-                {hieroglyphs.map((src, index) => <Hieroglyph key={index} src={src} />)}
-              </div>
-            </ScrollContainer>
-          </div>
-          <img className={centeredBlock('man')} src={require('./images/Man.svg')} />
+              {index + 1}
+            </span>
+          ))}
         </div>
       </div>
     )

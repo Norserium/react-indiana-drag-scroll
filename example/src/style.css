@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+.example-application__container {
+  margin-bottom: 40px;
+}
+
+.example-application__pages {
+  text-align: center;
+  opacity: 0.25;
+  transition:  0.5s;
+}
+
+.example-application__pages:hover {
+  opacity: 1;
+}
+
+.example-application__page {
+  cursor: pointer;
+  font-weight: bold;
+  opacity: 0.4;
+  transition:  0.5s;
+  padding: 10px;
+}
+
+.example-application__page--active {
+  opacity: 1;
+}
+

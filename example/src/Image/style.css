@@ -1,0 +1,16 @@
+.image-example {
+  border: solid 5px #E2D7C7;
+  background: #282828;
+  height: 310px;
+  width: 310px;
+  overflow: hidden;
+}
+
+.image-example__container {
+  height: 100%;
+  width: 100%;
+}
+
+.image-example__image {
+  display: block;
+}
