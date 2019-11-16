@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/react-indiana-drag-scroll/static/media/7.f6ff5731.svg"
   },
   {
-    "revision": "c04e073eea377b5d5ae6",
+    "revision": "dd491408a3f5e760e3a5",
     "url": "/react-indiana-drag-scroll/static/css/main.9b011484.chunk.css"
   },
   {
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/react-indiana-drag-scroll/static/media/6.764257ff.svg"
   },
   {
-    "revision": "c04e073eea377b5d5ae6",
-    "url": "/react-indiana-drag-scroll/static/js/main.4bae4758.chunk.js"
+    "revision": "dd491408a3f5e760e3a5",
+    "url": "/react-indiana-drag-scroll/static/js/main.a1f2ff27.chunk.js"
   },
   {
     "revision": "3712db9050f3094c46cfeb5e902339c9",
@@ -76,7 +76,7 @@ self.__precacheManifest = [
     "url": "/react-indiana-drag-scroll/static/media/Man.486abb77.svg"
   },
   {
-    "revision": "6aade3053008641f240eb2e883ef7726",
+    "revision": "c4f50846e51cd193340b2a2037123cd1",
     "url": "/react-indiana-drag-scroll/index.html"
   }
 ];
