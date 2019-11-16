@@ -1,19 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "f6ff5731f3c2a9b6fc64192bc0e12cd7",
-    "url": "/react-indiana-drag-scroll/static/media/7.f6ff5731.svg"
+    "revision": "764257ffa23d281eba3f2b590272858f",
+    "url": "/react-indiana-drag-scroll/static/media/6.764257ff.svg"
   },
   {
-    "revision": "dd491408a3f5e760e3a5",
-    "url": "/react-indiana-drag-scroll/static/css/main.9b011484.chunk.css"
+    "revision": "a5451b9b98d2cec00f1f",
+    "url": "/react-indiana-drag-scroll/static/css/main.dd395658.chunk.css"
   },
   {
     "revision": "3803e748284e3d24ebb0",
     "url": "/react-indiana-drag-scroll/static/js/runtime~main.1a3eacaa.js"
   },
   {
-    "revision": "6577153c8490468dd6bf",
-    "url": "/react-indiana-drag-scroll/static/js/2.b77e21a0.chunk.js"
+    "revision": "a1359f13fc092f57ce27",
+    "url": "/react-indiana-drag-scroll/static/js/2.e544ef7e.chunk.js"
+  },
+  {
+    "revision": "31f93063f4902c27857507b23693e327",
+    "url": "/react-indiana-drag-scroll/static/media/background.31f93063.jpg"
   },
   {
     "revision": "e29a7e6e7034c9a86c1711ab4912dc22",
@@ -36,12 +40,12 @@ self.__precacheManifest = [
     "url": "/react-indiana-drag-scroll/static/media/5.a5929661.svg"
   },
   {
-    "revision": "764257ffa23d281eba3f2b590272858f",
-    "url": "/react-indiana-drag-scroll/static/media/6.764257ff.svg"
+    "revision": "a5451b9b98d2cec00f1f",
+    "url": "/react-indiana-drag-scroll/static/js/main.631e1dac.chunk.js"
   },
   {
-    "revision": "dd491408a3f5e760e3a5",
-    "url": "/react-indiana-drag-scroll/static/js/main.a1f2ff27.chunk.js"
+    "revision": "f6ff5731f3c2a9b6fc64192bc0e12cd7",
+    "url": "/react-indiana-drag-scroll/static/media/7.f6ff5731.svg"
   },
   {
     "revision": "3712db9050f3094c46cfeb5e902339c9",
@@ -76,7 +80,7 @@ self.__precacheManifest = [
     "url": "/react-indiana-drag-scroll/static/media/Man.486abb77.svg"
   },
   {
-    "revision": "c4f50846e51cd193340b2a2037123cd1",
+    "revision": "c82ab39f3627c93208ffd3c0e88ea46c",
     "url": "/react-indiana-drag-scroll/index.html"
   }
 ];

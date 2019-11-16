@@ -1,15 +1,15 @@
 {
-  "main.css": "/react-indiana-drag-scroll/static/css/main.9b011484.chunk.css",
-  "main.js": "/react-indiana-drag-scroll/static/js/main.a1f2ff27.chunk.js",
-  "main.js.map": "/react-indiana-drag-scroll/static/js/main.a1f2ff27.chunk.js.map",
+  "main.css": "/react-indiana-drag-scroll/static/css/main.dd395658.chunk.css",
+  "main.js": "/react-indiana-drag-scroll/static/js/main.631e1dac.chunk.js",
+  "main.js.map": "/react-indiana-drag-scroll/static/js/main.631e1dac.chunk.js.map",
   "runtime~main.js": "/react-indiana-drag-scroll/static/js/runtime~main.1a3eacaa.js",
   "runtime~main.js.map": "/react-indiana-drag-scroll/static/js/runtime~main.1a3eacaa.js.map",
-  "static/js/2.b77e21a0.chunk.js": "/react-indiana-drag-scroll/static/js/2.b77e21a0.chunk.js",
-  "static/js/2.b77e21a0.chunk.js.map": "/react-indiana-drag-scroll/static/js/2.b77e21a0.chunk.js.map",
+  "static/js/2.e544ef7e.chunk.js": "/react-indiana-drag-scroll/static/js/2.e544ef7e.chunk.js",
+  "static/js/2.e544ef7e.chunk.js.map": "/react-indiana-drag-scroll/static/js/2.e544ef7e.chunk.js.map",
   "index.html": "/react-indiana-drag-scroll/index.html",
-  "precache-manifest.3a4191989b71b66a2bcc6bbe6f3aa840.js": "/react-indiana-drag-scroll/precache-manifest.3a4191989b71b66a2bcc6bbe6f3aa840.js",
+  "precache-manifest.5a13710f827f9f4e7dc843f45d1619cd.js": "/react-indiana-drag-scroll/precache-manifest.5a13710f827f9f4e7dc843f45d1619cd.js",
   "service-worker.js": "/react-indiana-drag-scroll/service-worker.js",
-  "static/css/main.9b011484.chunk.css.map": "/react-indiana-drag-scroll/static/css/main.9b011484.chunk.css.map",
+  "static/css/main.dd395658.chunk.css.map": "/react-indiana-drag-scroll/static/css/main.dd395658.chunk.css.map",
   "static/media/1.svg": "/react-indiana-drag-scroll/static/media/1.e29a7e6e.svg",
   "static/media/10.svg": "/react-indiana-drag-scroll/static/media/10.d77908dd.svg",
   "static/media/11.svg": "/react-indiana-drag-scroll/static/media/11.70ad57f8.svg",
@@ -24,5 +24,6 @@
   "static/media/7.svg": "/react-indiana-drag-scroll/static/media/7.f6ff5731.svg",
   "static/media/8.svg": "/react-indiana-drag-scroll/static/media/8.3712db90.svg",
   "static/media/9.svg": "/react-indiana-drag-scroll/static/media/9.4dbdae24.svg",
-  "static/media/Man.svg": "/react-indiana-drag-scroll/static/media/Man.486abb77.svg"
+  "static/media/Man.svg": "/react-indiana-drag-scroll/static/media/Man.486abb77.svg",
+  "static/media/background.jpg": "/react-indiana-drag-scroll/static/media/background.31f93063.jpg"
 }
