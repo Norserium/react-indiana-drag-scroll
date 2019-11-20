@@ -262,6 +262,7 @@ export default class ScrollContainer extends PureComponent {
     if (container && onEndScroll) {
       onEndScroll(container.scrollLeft, container.scrollTop, container.scrollWidth, container.scrollHeight)
     }
+    document.body.classList.remove('indiana-dragging')
     this.forceUpdate()
   }
 
