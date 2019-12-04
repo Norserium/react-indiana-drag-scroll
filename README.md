@@ -2,6 +2,8 @@
 
 > Implements scroll on drag
 
+[Examples](https://norserium.github.io/react-indiana-drag-scroll/) / [Sandbox](https://codesandbox.io/s/react-indiana-drag-scroll-default-iw9xh)
+
 [![NPM](https://img.shields.io/npm/v/react-indiana-drag-scroll.svg)](https://www.npmjs.com/package/react-indiana-drag-scroll) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Welcome to journey!
