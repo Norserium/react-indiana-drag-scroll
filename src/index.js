@@ -265,6 +265,11 @@ export default class ScrollContainer extends PureComponent {
     this.forceUpdate()
   }
 
+  scrollTo(newClientX, newClientY) {
+    const container = this.container.current
+    container.scrollTo(newClientX, newClientY)
+  }
+
   render() {
     const {
       children, className, style, hideScrollbars

@@ -1,4 +1,4 @@
-import { CSSProperties, FC, ReactNode } from "react";
+import { CSSProperties, FC, ReactNode, Ref } from "react";
 
 declare const ScrollContainer: FC<{
   vertical?: boolean;
@@ -28,6 +28,7 @@ declare const ScrollContainer: FC<{
   style?: CSSProperties;
   ignoreElements?: string;
   nativeMobileScroll?: boolean;
+  ref?: MutableRefObject<any>;
 }>;
 
 export default ScrollContainer;
