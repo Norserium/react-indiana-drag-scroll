@@ -1,6 +1,6 @@
-import { CSSProperties, FC, ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 
-declare const ScrollContainer: FC<{
+export interface IScrollContainerProps {
   vertical?: boolean;
   horizontal?: boolean;
   hideScrollbars?: boolean;
@@ -28,6 +28,9 @@ declare const ScrollContainer: FC<{
   style?: CSSProperties;
   ignoreElements?: string;
   nativeMobileScroll?: boolean;
-}>;
+  ref?: ReactNode;
+}
 
-export default ScrollContainer;
+export default class ScrollContainer extends React.Component<IScrollContainerProps> {
+  getElement: () => HTMLElement;
+}
