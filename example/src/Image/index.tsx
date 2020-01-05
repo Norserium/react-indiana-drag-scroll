@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
+// @ts-ignore
 import bem from 'easy-bem'
 import ScrollContainer from 'react-indiana-drag-scroll'
-import background from './background.jpg'
 import './style.css'
 
 const cn = bem('image-example')
@@ -13,11 +13,11 @@ export default class Image extends Component {
         <ScrollContainer
           className={cn('container')}
           nativeMobileScroll={false}
-          onStartScroll={(...args) => { console.log('onStartScroll', args) }}
-          onScroll={(...args) => { console.log('onScroll', args) }}
-          onEndScroll={(...args) => { console.log('onEndScroll', args) }}
+          onStartScroll={(...args: any) => { console.log('onStartScroll', args) }}
+          onScroll={(...args: any) => { console.log('onScroll', args) }}
+          onEndScroll={(...args: any) => { console.log('onEndScroll', args) }}
         >
-          <img className={cn('image')} src={background} />
+          <img className={cn('image')} src={require('./background.jpg')} />
         </ScrollContainer>
       </div>
     )
