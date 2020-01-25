@@ -57,6 +57,19 @@ class Example extends Component {
 | ignoreElements     | String   | Selector for elements that should not trigger the scrolling behaviour (for example, ".modal, dialog" or "\*[prevent-drag-scroll]") |
 | nativeMobileScroll | Bool     | Use native mobile drag scroll for mobile devices                                          | true
 
+## Static functions
+
+| Name               | Returns     | Description                                                                            |
+| ------------------ | ----------- | -------------------------------------------------------------------------------------- |
+| getElement         | HTMLElement | Returns the HTML element                                                               |
+
+
+## FAQ
+
+### How to set the initial scroll?
+
+To set initial scroll you need get the ref to the main DOM element of the `ScrollContainer`. It can be implement by [using `ReactDOM.findDOMNode`](https://codesandbox.io/s/react-indiana-drag-scroll-initial-scroll-finddomnode-dvdop) or by [using the static function `getElement`](https://codesandbox.io/s/react-indiana-drag-scroll-initial-scroll-getelement-99o6q) (this approach is avaiable in the strict mode by the way).
+
 ## License
 
 The source code is licensed under MIT, all images (except [hieroglyphs](https://www.freepik.com/free-vector/ancient-egypt-hieroglyphics-background-with-flat-design_2754100.htm)) are copyrighted to their respective owner © [Norserium](https://github.com/norserium)
