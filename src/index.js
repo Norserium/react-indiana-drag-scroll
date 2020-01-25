@@ -218,7 +218,7 @@ export default class ScrollContainer extends PureComponent {
       if (onScroll) {
         onScroll(container.scrollLeft, container.scrollTop, container.scrollWidth, container.scrollHeight)
       }
-    } else if (this.pressed) {
+    } else {
       this.processStart(e, false)
     }
   }
