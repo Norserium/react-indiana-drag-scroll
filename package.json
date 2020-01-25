@@ -37,6 +37,7 @@
     "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
+    "@types/react": "^16.9.19",
     "autoprefixer": "^9.6.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^9.0.0",
