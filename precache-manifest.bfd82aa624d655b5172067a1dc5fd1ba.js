@@ -1,23 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "764257ffa23d281eba3f2b590272858f",
-    "url": "/react-indiana-drag-scroll/static/media/6.764257ff.svg"
+    "revision": "f6ff5731f3c2a9b6fc64192bc0e12cd7",
+    "url": "/react-indiana-drag-scroll/static/media/7.f6ff5731.svg"
   },
   {
-    "revision": "dea59b4cd07e8b604433",
-    "url": "/react-indiana-drag-scroll/static/css/main.e23e103d.chunk.css"
+    "revision": "8f427dfd27b73cb5a292",
+    "url": "/react-indiana-drag-scroll/static/css/main.4d2d2412.chunk.css"
   },
   {
     "revision": "3803e748284e3d24ebb0",
     "url": "/react-indiana-drag-scroll/static/js/runtime~main.1a3eacaa.js"
   },
   {
-    "revision": "a1359f13fc092f57ce27",
-    "url": "/react-indiana-drag-scroll/static/js/2.e544ef7e.chunk.js"
-  },
-  {
-    "revision": "31f93063f4902c27857507b23693e327",
-    "url": "/react-indiana-drag-scroll/static/media/background.31f93063.jpg"
+    "revision": "f88aa97b12829b1f876f",
+    "url": "/react-indiana-drag-scroll/static/js/2.57393455.chunk.js"
   },
   {
     "revision": "e29a7e6e7034c9a86c1711ab4912dc22",
@@ -40,12 +36,12 @@ self.__precacheManifest = [
     "url": "/react-indiana-drag-scroll/static/media/5.a5929661.svg"
   },
   {
-    "revision": "dea59b4cd07e8b604433",
-    "url": "/react-indiana-drag-scroll/static/js/main.9598168e.chunk.js"
+    "revision": "764257ffa23d281eba3f2b590272858f",
+    "url": "/react-indiana-drag-scroll/static/media/6.764257ff.svg"
   },
   {
-    "revision": "f6ff5731f3c2a9b6fc64192bc0e12cd7",
-    "url": "/react-indiana-drag-scroll/static/media/7.f6ff5731.svg"
+    "revision": "8f427dfd27b73cb5a292",
+    "url": "/react-indiana-drag-scroll/static/js/main.6c20467e.chunk.js"
   },
   {
     "revision": "3712db9050f3094c46cfeb5e902339c9",
@@ -80,7 +76,11 @@ self.__precacheManifest = [
     "url": "/react-indiana-drag-scroll/static/media/Man.486abb77.svg"
   },
   {
-    "revision": "635b7e70771e05c4ed372bc95cfe0362",
+    "revision": "31f93063f4902c27857507b23693e327",
+    "url": "/react-indiana-drag-scroll/static/media/background.31f93063.jpg"
+  },
+  {
+    "revision": "7f474f78c2ecceaab58f901fee78411a",
     "url": "/react-indiana-drag-scroll/index.html"
   }
 ];
