@@ -23,7 +23,8 @@ export default class ScrollContainer extends PureComponent {
     className: PropTypes.string,
     style: PropTypes.object,
     ignoreElements: PropTypes.string,
-    nativeMobileScroll: PropTypes.bool
+    nativeMobileScroll: PropTypes.bool,
+    stopPropagation: PropTypes.bool
   }
 
   static defaultProps = {
@@ -32,6 +33,7 @@ export default class ScrollContainer extends PureComponent {
     activationDistance: 10,
     vertical: true,
     horizontal: true,
+    stopPropagation: false,
     style: {}
   }
 
@@ -124,7 +126,7 @@ export default class ScrollContainer extends PureComponent {
       } else {
         const touch = e.touches[0]
         this.processClick(e, touch.clientX, touch.clientY)
-        if (!nativeMobileScroll) {
+        if (!nativeMobileScroll && this.props.stopPropagation) {
           e.stopPropagation()
         }
       }
@@ -145,13 +147,15 @@ export default class ScrollContainer extends PureComponent {
 
   onTouchMove = (e) => {
     const {nativeMobileScroll} = this.props
-    if (this.pressed && !nativeMobileScroll) {
+    if (this.pressed && (!nativeMobileScroll || !this.isMobile)) {
       const touch = e.touches[0]
       if (touch) {
         this.processMove(e, touch.clientX, touch.clientY)
       }
       e.preventDefault()
-      e.stopPropagation()
+      if (this.props.stopPropagation) {
+        e.stopPropagation()
+      }
     }
   }
 
@@ -159,7 +163,9 @@ export default class ScrollContainer extends PureComponent {
     if (this.isDraggable(e.target)) {
       this.processClick(e, e.clientX, e.clientY)
       e.preventDefault()
-      e.stopPropagation()
+      if (this.props.stopPropagation) {
+        e.stopPropagation()
+      }
     }
   };
 
@@ -167,7 +173,9 @@ export default class ScrollContainer extends PureComponent {
     if (this.pressed) {
       this.processMove(e, e.clientX, e.clientY)
       e.preventDefault()
-      e.stopPropagation()
+      if (this.props.stopPropagation) {
+        e.stopPropagation()
+      }
     }
   }
 
@@ -180,7 +188,9 @@ export default class ScrollContainer extends PureComponent {
         this.forceUpdate()
       }
       e.preventDefault()
-      e.stopPropagation()
+      if (this.props.stopPropagation) {
+        e.stopPropagation()
+      }
     }
   };
 
