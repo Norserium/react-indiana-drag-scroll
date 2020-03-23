@@ -24,7 +24,8 @@ export default class ScrollContainer extends PureComponent {
     style: PropTypes.object,
     ignoreElements: PropTypes.string,
     nativeMobileScroll: PropTypes.bool,
-    stopPropagation: PropTypes.bool
+    stopPropagation: PropTypes.bool,
+    ignoredMouseButtons: PropTypes.arrayOf(PropTypes.number)
   }
 
   static defaultProps = {
@@ -34,7 +35,9 @@ export default class ScrollContainer extends PureComponent {
     vertical: true,
     horizontal: true,
     stopPropagation: false,
-    style: {}
+    style: {},
+    // These are hardware forward/backward buttons
+    ignoredMouseButtons: [3, 4]
   }
 
   constructor(props) {
@@ -160,7 +163,8 @@ export default class ScrollContainer extends PureComponent {
   }
 
   onMouseDown = (e) => {
-    if (this.isDraggable(e.target)) {
+    const { ignoredMouseButtons } = this.props
+    if (this.isDraggable(e.target) && !ignoredMouseButtons.includes(e.button)) {
       this.processClick(e, e.clientX, e.clientY)
       e.preventDefault()
       if (this.props.stopPropagation) {
