@@ -24,6 +24,9 @@ export interface IScrollContainerProps {
     scrollWidth: number,
     scrollHeight: number
   ) => void;
+  onClick?: (
+    event: MouseEvent
+  ) => void;
   className?: string;
   style?: CSSProperties;
   ignoreElements?: string;
