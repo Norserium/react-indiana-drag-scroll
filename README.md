@@ -52,6 +52,7 @@ class Example extends Component {
 | onScroll           | Function | Invoked when user scrolling container                                                     |
 | onEndScroll        | Function | Invoked when user ends scrolling container                                                |
 | onStartScroll      | Function | Invoked when user starts scrolling container                                              |
+| onClick            | Function | Invoked when user clicks the scrolling container without dragging                         |
 | className          | String   | The custom classname for container                                                        |
 | style              | Number   | The custom styles for container                                                           |
 | ignoreElements     | String   | Selector for elements that should not trigger the scrolling behaviour (for example, ".modal, dialog" or "\*[prevent-drag-scroll]") |
