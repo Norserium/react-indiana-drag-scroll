@@ -20,6 +20,7 @@ export default class ScrollContainer extends PureComponent {
     onStartScroll: PropTypes.func,
     onScroll: PropTypes.func,
     onEndScroll: PropTypes.func,
+    onClick: PropTypes.func,
     className: PropTypes.string,
     style: PropTypes.object,
     ignoreElements: PropTypes.string,
@@ -186,6 +187,9 @@ export default class ScrollContainer extends PureComponent {
       } else {
         this.pressed = false
         this.forceUpdate()
+        if (this.props.onClick) {
+          this.props.onClick(e)
+        }
       }
       e.preventDefault()
       if (this.props.stopPropagation) {
