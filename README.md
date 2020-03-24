@@ -42,21 +42,21 @@ class Example extends Component {
 
 ## Component properties
 
-| Prop                | Type          | Description                                                                               | Default |
-| ------------------- | ------------- | ----------------------------------------------------------------------------------------- | ------- |
-| vertical            | Bool          | Allow vertical drag scrolling                                                             | true    |
-| horizontal          | Bool          | Allow horizontal drag scrolling                                                           | true    |
-| hideScrollbars      | Bool          | Hide the scrollbars                                                                       | true    |
-| activationDistance  | Number        | The distance that distinguish click and drag start                                        | 10      |
-| children            | Node          | The content of scrolling container                                                        |
-| onScroll            | Function      | Invoked when user scrolling container                                                     |
-| onEndScroll         | Function      | Invoked when user ends scrolling container                                                |
-| onStartScroll       | Function      | Invoked when user starts scrolling container                                              |
-| className           | String        | The custom classname for container                                                        |
-| style               | Number        | The custom styles for container                                                           |
-| ignoreElements      | String        | Selector for elements that should not trigger the scrolling behaviour (for example, ".modal, dialog" or "\*[prevent-drag-scroll]") |
-| nativeMobileScroll  | Bool          | Use native mobile drag scroll for mobile devices                                          | true
-| ignoredMouseButtons | Array(Number) | Specify mouse buttons to ignore such as hardware forward/backward and right mouse         | [3, 4]
+| Prop               | Type          | Description                                                                               | Default |
+| ------------------ | ------------- | ----------------------------------------------------------------------------------------- | ------- |
+| vertical           | Bool          | Allow vertical drag scrolling                                                             | true    |
+| horizontal         | Bool          | Allow horizontal drag scrolling                                                           | true    |
+| hideScrollbars     | Bool          | Hide the scrollbars                                                                       | true    |
+| activationDistance | Number        | The distance that distinguish click and drag start                                        | 10      |
+| children           | Node          | The content of scrolling container                                                        |
+| onScroll           | Function      | Invoked when user scrolling container                                                     |
+| onEndScroll        | Function      | Invoked when user ends scrolling container                                                |
+| onStartScroll      | Function      | Invoked when user starts scrolling container                                              |
+| className          | String        | The custom classname for container                                                        |
+| style              | Number        | The custom styles for container                                                           |
+| ignoreElements     | String        | Selector for elements that should not trigger the scrolling behaviour (for example, ".modal, dialog" or "\*[prevent-drag-scroll]") |
+| nativeMobileScroll | Bool          | Use native mobile drag scroll for mobile devices                                          | true    |
+| ignoreMouseButtons | Array(Number) | Specify mouse buttons to ignore such as hardware forward/backward and right mouse         | [3, 4]  |
 
 ## Static functions
 

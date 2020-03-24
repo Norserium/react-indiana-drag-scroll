@@ -29,7 +29,7 @@ export interface IScrollContainerProps {
   ignoreElements?: string;
   nativeMobileScroll?: boolean;
   ref?: ReactNode;
-  ignoredMouseButtons?: Array<number>;
+  ignoreMouseButtons?: Array<number>;
 }
 
 export default class ScrollContainer extends Component<IScrollContainerProps> {
