@@ -15,6 +15,7 @@ export default class Image extends Component {
           nativeMobileScroll={false}
           onStartScroll={(...args: any) => { console.log('onStartScroll', args) }}
           onScroll={(...args: any) => { console.log('onScroll', args) }}
+          onClick={(...args: any) => { console.log('onClick', args) }}
           onEndScroll={(...args: any) => { console.log('onEndScroll', args) }}
         >
           <img className={cn('image')} src={require('./background.jpg')} />

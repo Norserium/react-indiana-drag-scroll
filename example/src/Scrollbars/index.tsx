@@ -37,6 +37,7 @@ export default class Scrollbars extends Component {
           hideScrollbars={false}
           onStartScroll={(...args: any) => { console.log('onStartScroll', args) }}
           onScroll={(...args: any) => { console.log('onScroll', args) }}
+          onClick={(...args) => { console.log('onClick', args) }}
           onEndScroll={(...args: any) => { console.log('onEndScroll', args) }}
           ref={this.container}
         >

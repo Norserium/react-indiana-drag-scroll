@@ -49,6 +49,7 @@ export default class Indiana extends Component {
             <ScrollContainer className='scroll-container'
               onStartScroll={this.onStartScroll}
               onScroll={(...args) => { console.log('onScroll', args) }}
+              onClick={(...args) => { console.log('onClick', args) }}
               onEndScroll={this.onEndScroll}
             >
               <div className='hieroglyphs'>
