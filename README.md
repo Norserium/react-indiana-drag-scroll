@@ -55,7 +55,7 @@ class Example extends Component {
 | onClick            | Function | Invoked when user clicks the scrolling container without dragging                         |
 | className          | String   | The custom classname for container                                                        |
 | style              | Number   | The custom styles for container                                                           |
-| ignoreElements     | String   | Selector for elements that should not trigger the scrolling behaviour (for example, ".modal, dialog" or "\*[prevent-drag-scroll]") |
+| ignoreElements     | String   | Selector for elements that should not trigger the scrolling behaviour (for example, `".modal, dialog"` or `"*[prevent-drag-scroll]"`) |
 | nativeMobileScroll | Bool     | Use native mobile drag scroll for mobile devices                                          | true
 
 ## Static functions
@@ -69,7 +69,7 @@ class Example extends Component {
 
 ### How to set the initial scroll?
 
-To set initial scroll you need get the ref to the main DOM element of the `ScrollContainer`. It can be implement by [using `ReactDOM.findDOMNode`](https://codesandbox.io/s/react-indiana-drag-scroll-initial-scroll-finddomnode-dvdop) or by [using the static function `getElement`](https://codesandbox.io/s/react-indiana-drag-scroll-initial-scroll-getelement-99o6q) (this approach is avaiable in the strict mode by the way).
+To set initial scroll you need get the ref to the main DOM element of the `ScrollContainer`. It can be implement by [using `ReactDOM.findDOMNode`](https://codesandbox.io/s/react-indiana-drag-scroll-initial-scroll-finddomnode-dvdop) or by [using the static function `getElement`](https://codesandbox.io/s/react-indiana-drag-scroll-initial-scroll-getelement-99o6q) (this approach is available in the strict mode by the way).
 
 ## License
 
