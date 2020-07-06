@@ -101,6 +101,11 @@ export default class ScrollContainer extends PureComponent {
     }
   }
 
+  isScrollable() {
+    const container = this.container.current;
+    return container && ((container.scrollWidth > container.clientWidth) || (container.scrollHeight > container.clientHeight))
+  }
+
   // Simulate 'onEndScroll' event that fires when scrolling is stopped
   onEndScroll = () => {
     this.scrolling = false
@@ -161,7 +166,7 @@ export default class ScrollContainer extends PureComponent {
   }
 
   onMouseDown = (e) => {
-    if (this.isDraggable(e.target)) {
+    if (this.isDraggable(e.target) && this.isScrollable()) {
       this.processClick(e, e.clientX, e.clientY)
       e.preventDefault()
       if (this.props.stopPropagation) {
