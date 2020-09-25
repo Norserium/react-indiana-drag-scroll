@@ -32,6 +32,7 @@ export interface IScrollContainerProps {
   ignoreElements?: string;
   nativeMobileScroll?: boolean;
   ref?: ReactNode;
+  component?: string;
 }
 
 export default class ScrollContainer extends Component<IScrollContainerProps> {

@@ -25,7 +25,8 @@ export default class ScrollContainer extends PureComponent {
     style: PropTypes.object,
     ignoreElements: PropTypes.string,
     nativeMobileScroll: PropTypes.bool,
-    stopPropagation: PropTypes.bool
+    stopPropagation: PropTypes.bool,
+    component: PropTypes.string
   }
 
   static defaultProps = {
@@ -35,7 +36,8 @@ export default class ScrollContainer extends PureComponent {
     vertical: true,
     horizontal: true,
     stopPropagation: false,
-    style: {}
+    style: {},
+    component: 'div'
   }
 
   constructor(props) {
@@ -102,7 +104,7 @@ export default class ScrollContainer extends PureComponent {
   }
 
   isScrollable() {
-    const container = this.container.current;
+    const container = this.container.current
     return container && ((container.scrollWidth > container.clientWidth) || (container.scrollHeight > container.clientHeight))
   }
 
@@ -287,11 +289,11 @@ export default class ScrollContainer extends PureComponent {
 
   render() {
     const {
-      children, className, style, hideScrollbars
+      children, className, style, hideScrollbars, component: Component
     } = this.props
 
     return (
-      <div
+      <Component
         className={classnames(className, cn({
           'dragging': this.pressed,
           'hide-scrollbars': hideScrollbars,
@@ -302,7 +304,7 @@ export default class ScrollContainer extends PureComponent {
         onScroll={this.onScroll}
       >
         {children}
-      </div>
+      </Component>
     )
   }
 }

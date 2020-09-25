@@ -53,8 +53,9 @@ class Example extends Component {
 | onEndScroll        | Function | Invoked when user ends scrolling container                                                |
 | onStartScroll      | Function | Invoked when user starts scrolling container                                              |
 | onClick            | Function | Invoked when user clicks the scrolling container without dragging                         |
-| className          | String   | The custom classname for container                                                        |
-| style              | Number   | The custom styles for container                                                           |
+| component          | String   | The component used for the root node.                                                     | 'div'
+| className          | String   | The custom classname for the container                                                    |
+| style              | Number   | The custom styles for the container                                                       |
 | ignoreElements     | String   | Selector for elements that should not trigger the scrolling behaviour (for example, `".modal, dialog"` or `"*[prevent-drag-scroll]"`) |
 | nativeMobileScroll | Bool     | Use native mobile drag scroll for mobile devices                                          | true
 
