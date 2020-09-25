@@ -71,7 +71,7 @@ class Example extends Component {
 
 ### How to set the initial scroll?
 
-To set initial scroll you need get the ref to the main DOM element of the `ScrollContainer`. It can be implement by [using `ReactDOM.findDOMNode`](https://codesandbox.io/s/react-indiana-drag-scroll-initial-scroll-finddomnode-dvdop) or by [using the static function `getElement`](https://codesandbox.io/s/react-indiana-drag-scroll-initial-scroll-getelement-99o6q) (this approach is available in the strict mode by the way).
+To set initial scroll you need get the ref to the root node of the `ScrollContainer`. It can be implemented by [using `innerRef`property](https://codesandbox.io/s/react-indiana-drag-scroll-initial-scroll-innerref-0g8v5?file=/index.js) or [the static function `getElement`](https://codesandbox.io/s/react-indiana-drag-scroll-initial-scroll-getelement-99o6q). At the worst you can use the [`ReactDOM.findDOMNode`](https://codesandbox.io/s/react-indiana-drag-scroll-initial-scroll-finddomnode-dvdop) method.
 
 ## License
 
