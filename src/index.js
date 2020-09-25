@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Element } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import debounce from 'debounce'
@@ -26,7 +26,11 @@ export default class ScrollContainer extends PureComponent {
     ignoreElements: PropTypes.string,
     nativeMobileScroll: PropTypes.bool,
     stopPropagation: PropTypes.bool,
-    component: PropTypes.string
+    component: PropTypes.string,
+    innerRef: PropTypes.oneOfType([
+      PropTypes.func,
+      PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+    ])
   }
 
   static defaultProps = {
@@ -51,6 +55,9 @@ export default class ScrollContainer extends PureComponent {
     this.started = false
     // Is touch active or mouse pressed down
     this.pressed = false
+
+    // Bind callbacks
+    this.getRef = this.getRef.bind(this)
   }
 
   componentDidMount() {
@@ -287,6 +294,18 @@ export default class ScrollContainer extends PureComponent {
     this.forceUpdate()
   }
 
+  getRef(el) {
+    [this.container, this.props.innerRef].forEach(ref => {
+      if (ref) {
+        if (typeof ref === 'function') {
+          ref(el)
+        } else {
+          ref.current = el
+        }
+      }
+    })
+  }
+
   render() {
     const {
       children, className, style, hideScrollbars, component: Component
@@ -300,7 +319,7 @@ export default class ScrollContainer extends PureComponent {
           'native-scroll': this.isMobile
         }))}
         style={style}
-        ref={this.container}
+        ref={this.getRef}
         onScroll={this.onScroll}
       >
         {children}

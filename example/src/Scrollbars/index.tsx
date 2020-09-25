@@ -10,7 +10,7 @@ const COLS = 20
 const ROWS = 20
 
 export default class Scrollbars extends Component {
-  container = React.createRef<ScrollContainer>();
+  container = React.createRef<HTMLElement>();
   numbers = Array(ROWS).fill(0).map<JSX.Element>((el: JSX.Element, row: number) => (
     <div className={cn('row')} key={row}>
       {Array(COLS).fill(0).map((el: JSX.Element, col: number) => (
@@ -22,7 +22,7 @@ export default class Scrollbars extends Component {
   ))
 
   componentDidMount() {
-    const element = this.container.current ? this.container.current.getElement() : null;
+    const element = this.container.current;
     if (element) {
       element.scrollTop = (element.scrollHeight - element.clientWidth) / 2;
       element.scrollLeft = (element.scrollWidth - element.clientHeight) / 2;
@@ -37,9 +37,9 @@ export default class Scrollbars extends Component {
           hideScrollbars={false}
           onStartScroll={(...args: any) => { console.log('onStartScroll', args) }}
           onScroll={(...args: any) => { console.log('onScroll', args) }}
-          onClick={(...args) => { console.log('onClick', args) }}
+          onClick={(...args: any) => { console.log('onClick', args) }}
           onEndScroll={(...args: any) => { console.log('onEndScroll', args) }}
-          ref={this.container}
+          innerRef={this.container}
         >
           {this.numbers}
         </ScrollContainer>

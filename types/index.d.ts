@@ -1,4 +1,4 @@
-import { Component, CSSProperties, ReactNode } from "react";
+import { Component, CSSProperties, ReactNode, ElementType } from "react";
 
 export interface IScrollContainerProps {
   vertical?: boolean;
@@ -32,7 +32,8 @@ export interface IScrollContainerProps {
   ignoreElements?: string;
   nativeMobileScroll?: boolean;
   ref?: ReactNode;
-  component?: string;
+  component?: ElementType;
+  innerRef?: React.Ref<HTMLElement>;
 }
 
 export default class ScrollContainer extends Component<IScrollContainerProps> {

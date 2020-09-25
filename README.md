@@ -42,22 +42,23 @@ class Example extends Component {
 
 ## Component properties
 
-| Prop               | Type     | Description                                                                               | Default |
-| ------------------ | -------- | ----------------------------------------------------------------------------------------- | ------- |
-| vertical           | Bool     | Allow vertical drag scrolling                                                             | true    |
-| horizontal         | Bool     | Allow horizontal drag scrolling                                                           | true    |
-| hideScrollbars     | Bool     | Hide the scrollbars                                                                       | true    |
-| activationDistance | Number   | The distance that distinguish click and drag start                                        | 10      |
-| children           | Node     | The content of scrolling container                                                        |
-| onScroll           | Function | Invoked when user scrolling container                                                     |
-| onEndScroll        | Function | Invoked when user ends scrolling container                                                |
-| onStartScroll      | Function | Invoked when user starts scrolling container                                              |
-| onClick            | Function | Invoked when user clicks the scrolling container without dragging                         |
-| component          | String   | The component used for the root node.                                                     | 'div'
-| className          | String   | The custom classname for the container                                                    |
-| style              | Number   | The custom styles for the container                                                       |
-| ignoreElements     | String   | Selector for elements that should not trigger the scrolling behaviour (for example, `".modal, dialog"` or `"*[prevent-drag-scroll]"`) |
-| nativeMobileScroll | Bool     | Use native mobile drag scroll for mobile devices                                          | true
+| Prop               | Type         | Description                                                                               | Default |
+| ------------------ | ------------ | ----------------------------------------------------------------------------------------- | ------- |
+| vertical           | Bool         | Allow vertical drag scrolling                                                             | true    |
+| horizontal         | Bool         | Allow horizontal drag scrolling                                                           | true    |
+| hideScrollbars     | Bool         | Hide the scrollbars                                                                       | true    |
+| activationDistance | Number       | The distance that distinguish click and drag start                                        | 10      |
+| children           | Node         | The content of scrolling container                                                        |
+| onScroll           | Function     | Invoked when user scrolling container                                                     |
+| onEndScroll        | Function     | Invoked when user ends scrolling container                                                |
+| onStartScroll      | Function     | Invoked when user starts scrolling container                                              |
+| onClick            | Function     | Invoked when user clicks the scrolling container without dragging                         |
+| component          | String       | The component used for the root node.                                                     | 'div'
+| className          | String       | The custom classname for the container                                                    |
+| style              | Number       | The custom styles for the container                                                       |
+| innerRef           | ElementType  | The ref to the root node (experimental alternative to `getElement`)                       |
+| ignoreElements     | String       | Selector for elements that should not trigger the scrolling behaviour (for example, `".modal, dialog"` or `"*[prevent-drag-scroll]"`) |
+| nativeMobileScroll | Bool         | Use native mobile drag scroll for mobile devices                                          | true
 
 ## Static functions
 

@@ -57,7 +57,7 @@ export default class Indiana extends Component {
               </div>
             </ScrollContainer>
           </div>
-          <img className={cn('man')} src={require('./images/Man.svg')} />
+          <img alt='Indiana Jones' className={cn('man')} src={require('./images/Man.svg')} />
         </div>
       </div>
     )
