@@ -1,4 +1,4 @@
-import React, { PureComponent, Element } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import debounce from 'debounce'
@@ -29,7 +29,7 @@ export default class ScrollContainer extends PureComponent {
     component: PropTypes.string,
     innerRef: PropTypes.oneOfType([
       PropTypes.func,
-      PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+      PropTypes.shape({ current: PropTypes.any })
     ])
   }
 
@@ -61,17 +61,17 @@ export default class ScrollContainer extends PureComponent {
   }
 
   componentDidMount() {
-    const {nativeMobileScroll} = this.props
+    const { nativeMobileScroll } = this.props
     const container = this.container.current
 
     window.addEventListener('mouseup', this.onMouseUp)
     window.addEventListener('mousemove', this.onMouseMove)
-    window.addEventListener('touchmove', this.onTouchMove, {passive: false})
+    window.addEventListener('touchmove', this.onTouchMove, { passive: false })
     window.addEventListener('touchend', this.onTouchEnd)
 
     // due to https://github.com/facebook/react/issues/9809#issuecomment-414072263
-    container.addEventListener('touchstart', this.onTouchStart, {passive: false})
-    container.addEventListener('mousedown', this.onMouseDown, {passive: false})
+    container.addEventListener('touchstart', this.onTouchStart, { passive: false })
+    container.addEventListener('mousedown', this.onMouseDown, { passive: false })
 
     if (nativeMobileScroll) {
       // We should check if it's the mobile device after page was loaded
@@ -134,7 +134,7 @@ export default class ScrollContainer extends PureComponent {
   }
 
   onTouchStart = (e) => {
-    const {nativeMobileScroll} = this.props
+    const { nativeMobileScroll } = this.props
     if (this.isDraggable(e.target)) {
       if (nativeMobileScroll && this.scrolling) {
         this.pressed = true
@@ -149,7 +149,7 @@ export default class ScrollContainer extends PureComponent {
   }
 
   onTouchEnd = (e) => {
-    const {nativeMobileScroll} = this.props
+    const { nativeMobileScroll } = this.props
     if (this.pressed) {
       if (this.started && (!this.scrolling || !nativeMobileScroll)) {
         this.processEnd()
@@ -161,7 +161,7 @@ export default class ScrollContainer extends PureComponent {
   };
 
   onTouchMove = (e) => {
-    const {nativeMobileScroll} = this.props
+    const { nativeMobileScroll } = this.props
     if (this.pressed && (!nativeMobileScroll || !this.isMobile)) {
       const touch = e.touches[0]
       if (touch) {
@@ -241,7 +241,7 @@ export default class ScrollContainer extends PureComponent {
   // Process native scroll (scrollbar, mobile scroll)
   processScroll(e) {
     if (this.started) {
-      const {onScroll} = this.props
+      const { onScroll } = this.props
       const container = this.container.current
       if (onScroll) {
         onScroll(container.scrollLeft, container.scrollTop, container.scrollWidth, container.scrollHeight)
@@ -253,7 +253,7 @@ export default class ScrollContainer extends PureComponent {
 
   // Process non-native scroll
   processMove(e, newClientX, newClientY) {
-    const {horizontal, vertical, activationDistance, onScroll} = this.props
+    const { horizontal, vertical, activationDistance, onScroll } = this.props
     const container = this.container.current
 
     if (!this.started) {

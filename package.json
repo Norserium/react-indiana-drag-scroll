@@ -1,6 +1,6 @@
 {
   "name": "react-indiana-drag-scroll",
-  "version": "1.7.0",
+  "version": "1.7.2",
   "description": "Implements scroll on drag",
   "author": "Norserium",
   "license": "MIT",
@@ -32,7 +32,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.4",
+    "prop-types": "^15.7.0",
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0"
   },
