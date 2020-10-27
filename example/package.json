@@ -11,8 +11,8 @@
     "@types/react-dom": "^16.9.4",
     "gh-pages": "^2.0.1",
     "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "react-indiana-drag-scroll": "file:..",
     "react-scripts": "^2.1.8",
     "typescript": "^3.7.4"
