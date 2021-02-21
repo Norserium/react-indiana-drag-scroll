@@ -29,7 +29,11 @@ export default class ScrollContainer extends PureComponent {
     component: PropTypes.string,
     innerRef: PropTypes.oneOfType([
       PropTypes.func,
-      PropTypes.shape({ current: PropTypes.any })
+      PropTypes.shape({ current: PropTypes.elementType })
+    ]),
+    overrideRef: PropTypes.oneOfType([
+      PropTypes.func,
+      PropTypes.shape({ current: PropTypes.elementType })
     ])
   }
 
@@ -46,7 +50,7 @@ export default class ScrollContainer extends PureComponent {
 
   constructor(props) {
     super(props)
-    this.container = React.createRef()
+    this.container = props.overrideRef ? props.overrideRef : React.createRef()
     this.onEndScroll = debounce(this.onEndScroll, SCROLL_END_DEBOUNCE)
 
     // Is container scrolling now (for example by inertia)
@@ -295,7 +299,11 @@ export default class ScrollContainer extends PureComponent {
   }
 
   getRef(el) {
-    [this.container, this.props.innerRef].forEach(ref => {
+    const refsToBeSet = [this.props.innerRef]
+    if (!this.props.overrideRef) {
+      refsToBeSet.push(this.container)
+    }
+    refsToBeSet.forEach(ref => {
       if (ref) {
         if (typeof ref === 'function') {
           ref(el)

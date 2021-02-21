@@ -56,7 +56,8 @@ class Example extends Component {
 | component          | String       | The component used for the root node.                                                     | 'div'
 | className          | String       | The custom classname for the container                                                    |
 | style              | Number       | The custom styles for the container                                                       |
-| innerRef           | ElementType  | The ref to the root node (experimental alternative to `getElement`)                       |
+| innerRef           | React.Ref<HTMLElement> | The ref to the root node (experimental alternative to `getElement`)             |
+| overrideRef        | React.Ref<HTMLElement> | The custom ref to the root node (useful when with other component which creates wrapper dom) |
 | ignoreElements     | String       | Selector for elements that should not trigger the scrolling behaviour (for example, `".modal, dialog"` or `"*[prevent-drag-scroll]"`) |
 | nativeMobileScroll | Bool         | Use native mobile drag scroll for mobile devices                                          | true
 
