@@ -1,6 +1,7 @@
 .indiana-scroll-container {
   overflow: auto;
   &--dragging {
+    scroll-behavior: auto !important;
     > * {
       pointer-events: none;
       cursor: grab;
