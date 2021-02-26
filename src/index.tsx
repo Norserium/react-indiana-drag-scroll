@@ -1,16 +1,41 @@
-import React, { PureComponent } from 'react'
+import React, { CSSProperties, ElementType, MouseEvent, PureComponent, ReactNode, Ref, RefObject } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import debounce from 'debounce'
 import bem from 'easy-bem'
 
-import './style.css'
+import './style.scss'
 
 const cn = bem('indiana-scroll-container')
 
 const SCROLL_END_DEBOUNCE = 300
 
-export default class ScrollContainer extends PureComponent {
+interface ScrollEvent {
+  external: boolean;
+}
+
+interface Props {
+  vertical?: boolean;
+  horizontal?: boolean;
+  hideScrollbars?: boolean;
+  activationDistance?: number;
+  children?: ReactNode;
+  onStartScroll?: (event: ScrollEvent) => void;
+  onScroll?: (event: ScrollEvent) => void;
+  onEndScroll?: (event: ScrollEvent) => void;
+  onClick?: (
+    event: MouseEvent
+  ) => void;
+  className?: string;
+  style?: CSSProperties;
+  ignoreElements?: string;
+  nativeMobileScroll?: boolean;
+  ref?: ReactNode;
+  component?: ElementType;
+  innerRef?: Ref<HTMLElement>;
+}
+
+export default class ScrollContainer extends PureComponent<Props> {
   static propTypes = {
     vertical: PropTypes.bool,
     horizontal: PropTypes.bool,
@@ -42,7 +67,12 @@ export default class ScrollContainer extends PureComponent {
     stopPropagation: false,
     style: {},
     component: 'div'
-  }
+  };
+  container: RefObject<HTMLElement>;
+  scrolling: boolean;
+  started: boolean;
+  pressed: boolean;
+  isMobile: boolean;
 
   constructor(props) {
     super(props)
