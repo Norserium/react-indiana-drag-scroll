@@ -32,7 +32,6 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "prop-types": "^15.7.0",
     "react": "^15.0.0 || ^16.0.0 || ^17.0.0",
     "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0"
   },
@@ -68,6 +67,7 @@
     "react-dom": "^17.0.0",
     "react-scripts": "^2.1.8",
     "rollup": "^2.26.10",
+    "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.3",
     "rollup-plugin-scss": "^2.6.1",
     "rollup-plugin-terser": "^7.0.2",
@@ -82,7 +82,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "debounce": "^1.2.0",
-    "easy-bem": "^1.0.0"
+    "easy-bem": "^1.1.1"
   },
   "husky": {
     "hooks": {

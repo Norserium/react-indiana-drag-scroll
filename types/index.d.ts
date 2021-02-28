@@ -1,41 +1,25 @@
-import { Ref, MouseEvent, Component, CSSProperties, ReactNode, ElementType } from 'react'
+import { Ref, MouseEvent, Component, CSSProperties, ReactNode, ElementType } from 'react';
 
-export interface IScrollContainerProps {
-  vertical?: boolean;
-  horizontal?: boolean;
-  hideScrollbars?: boolean;
-  activationDistance?: number;
-  children?: ReactNode;
-  onStartScroll?: (
-    scrollLeft: number,
-    scrollTop: number,
-    scrollWidth: number,
-    scrollHeight: number
-  ) => void;
-  onScroll?: (
-    scrollLeft: number,
-    scrollTop: number,
-    scrollWidth: number,
-    scrollHeight: number
-  ) => void;
-  onEndScroll?: (
-    scrollLeft: number,
-    scrollTop: number,
-    scrollWidth: number,
-    scrollHeight: number
-  ) => void;
-  onClick?: (
-    event: MouseEvent
-  ) => void;
-  className?: string;
-  style?: CSSProperties;
-  ignoreElements?: string;
-  nativeMobileScroll?: boolean;
-  ref?: ReactNode;
-  component?: ElementType;
-  innerRef?: Ref<HTMLElement>;
+export interface ScrollContainerProps {
+	vertical?: boolean;
+	horizontal?: boolean;
+	hideScrollbars?: boolean;
+	activationDistance?: number;
+	children?: ReactNode;
+	onStartScroll?: (event: ScrollEvent) => void;
+	onScroll?: (event: ScrollEvent) => void;
+	onEndScroll?: (event: ScrollEvent) => void;
+	onClick?: (event: MouseEvent) => void;
+	className?: string;
+	style?: CSSProperties;
+	ignoreElements?: string;
+	nativeMobileScroll?: boolean;
+	ref?: ReactNode;
+	component?: ElementType;
+	innerRef?: Ref<HTMLElement>;
+	stopPropagation?: boolean;
 }
 
-export default class ScrollContainer extends Component<IScrollContainerProps> {
-  getElement: () => HTMLElement;
+export default class ScrollContainer extends Component<ScrollContainerProps> {
+	getElement: () => HTMLElement;
 }

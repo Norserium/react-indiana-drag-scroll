@@ -15,13 +15,19 @@
     "plugin:prettier/recommended"
   ],
   "env": {
-    "es6": true
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
   },
   "rules": {
     // don't force es6 functions to include space before paren
     "space-before-function-paren": 0,
 
     // allow specifying true explicitly for boolean props
-    "react/jsx-boolean-value": 0
+    "react/jsx-boolean-value": 0,
+
+    // allow to miss the setting of explicit function return type
+    "@typescript-eslint/explicit-function-return-type": 0
   }
 }
