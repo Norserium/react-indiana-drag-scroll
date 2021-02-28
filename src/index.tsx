@@ -18,6 +18,8 @@ const cn = bem('indiana-scroll-container');
 
 const SCROLL_END_DEBOUNCE = 300;
 
+const LEFT_BUTTON = 0;
+
 interface ScrollEvent {
 	internal: boolean;
 }
@@ -40,6 +42,7 @@ interface Props {
 	component?: ElementType;
 	innerRef?: Ref<HTMLElement>;
 	stopPropagation?: boolean;
+	buttons?: number[];
 }
 
 export default class ScrollContainer extends PureComponent<Props> {
@@ -52,6 +55,7 @@ export default class ScrollContainer extends PureComponent<Props> {
 		stopPropagation: false,
 		style: {},
 		component: 'div',
+		buttons: [LEFT_BUTTON],
 	};
 	container: RefObject<HTMLElement>;
 	scrolling: boolean;
@@ -202,7 +206,7 @@ export default class ScrollContainer extends PureComponent<Props> {
 	};
 
 	onMouseDown = (e) => {
-		if (this.isDraggable(e.target) && this.isScrollable()) {
+		if (this.isDraggable(e.target) && this.isScrollable() && this.props.buttons.indexOf(e.button) !== -1) {
 			this.processClick(e, e.clientX, e.clientY);
 			e.preventDefault();
 			if (this.props.stopPropagation) {
