@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-indiana-drag-scroll/precache-manifest.cdd666539b651efdd749d726003a0c42.js"
+  "/react-indiana-drag-scroll/precache-manifest.1a6c18bfff11efdddf3aa21cc135a7ac.js"
 );
 
 workbox.clientsClaim();
