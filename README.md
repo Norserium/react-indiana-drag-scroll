@@ -59,6 +59,7 @@ class Example extends Component {
 | innerRef           | ElementType  | The ref to the root node (experimental alternative to `getElement`)                       |
 | ignoreElements     | String       | Selector for elements that should not trigger the scrolling behaviour (for example, `".modal, dialog"` or `"*[prevent-drag-scroll]"`) |
 | nativeMobileScroll | Bool         | Use native mobile drag scroll for mobile devices                                          | true
+| buttons            | Array<Number>| The list of mouse button numbers that will activate the scroll by drag                    | [0]
 
 ## Static functions
 
