@@ -210,12 +210,14 @@ export default class ScrollContainer extends PureComponent<Props> {
 	};
 
 	onMouseDown = (e) => {
-		if (this.isDraggable(e.target) && this.isScrollable() && this.props.buttons.indexOf(e.button) !== -1) {
+		if (this.isDraggable(e.target) && this.isScrollable()) {
 			this.internal = true;
-			this.processClick(e, e.clientX, e.clientY);
-			e.preventDefault();
-			if (this.props.stopPropagation) {
-				e.stopPropagation();
+			if (this.props.buttons.indexOf(e.button) !== -1) {
+				this.processClick(e, e.clientX, e.clientY);
+				e.preventDefault();
+				if (this.props.stopPropagation) {
+					e.stopPropagation();
+				}
 			}
 		}
 	};
@@ -235,6 +237,7 @@ export default class ScrollContainer extends PureComponent<Props> {
 			if (this.started) {
 				this.processEnd();
 			} else {
+				this.internal = false;
 				this.pressed = false;
 				this.forceUpdate();
 				if (this.props.onClick) {
