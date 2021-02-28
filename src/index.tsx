@@ -21,7 +21,7 @@ const SCROLL_END_DEBOUNCE = 300;
 const LEFT_BUTTON = 0;
 
 interface ScrollEvent {
-	internal: boolean;
+	external: boolean;
 }
 
 interface Props {
@@ -62,6 +62,7 @@ export default class ScrollContainer extends PureComponent<Props> {
 	started: boolean;
 	pressed: boolean;
 	isMobile: boolean;
+	internal: boolean;
 
 	scrollLeft?: number;
 	scrollTop?: number;
@@ -79,6 +80,8 @@ export default class ScrollContainer extends PureComponent<Props> {
 		this.started = false;
 		// Is touch active or mouse pressed down
 		this.pressed = false;
+		// Is event internal
+		this.internal = false;
 
 		// Bind callbacks
 		this.getRef = this.getRef.bind(this);
@@ -167,6 +170,7 @@ export default class ScrollContainer extends PureComponent<Props> {
 	onTouchStart = (e) => {
 		const { nativeMobileScroll } = this.props;
 		if (this.isDraggable(e.target)) {
+			this.internal = true;
 			if (nativeMobileScroll && this.scrolling) {
 				this.pressed = true;
 			} else {
@@ -207,6 +211,7 @@ export default class ScrollContainer extends PureComponent<Props> {
 
 	onMouseDown = (e) => {
 		if (this.isDraggable(e.target) && this.isScrollable() && this.props.buttons.indexOf(e.button) !== -1) {
+			this.internal = true;
 			this.processClick(e, e.clientX, e.clientY);
 			e.preventDefault();
 			if (this.props.stopPropagation) {
@@ -264,7 +269,7 @@ export default class ScrollContainer extends PureComponent<Props> {
 
 		if (onStartScroll) {
 			onStartScroll({
-				internal: this.pressed,
+				external: !this.internal,
 			});
 		}
 		this.forceUpdate();
@@ -276,7 +281,7 @@ export default class ScrollContainer extends PureComponent<Props> {
 			const { onScroll } = this.props;
 			if (onScroll) {
 				onScroll({
-					internal: this.pressed,
+					external: !this.internal,
 				});
 			}
 		} else {
@@ -306,7 +311,7 @@ export default class ScrollContainer extends PureComponent<Props> {
 				container.scrollTop -= newClientY - this.clientY;
 			}
 			if (onScroll) {
-				onScroll({ internal: this.pressed });
+				onScroll({ external: !this.internal });
 			}
 			this.clientX = newClientX;
 			this.clientY = newClientY;
@@ -321,13 +326,14 @@ export default class ScrollContainer extends PureComponent<Props> {
 
 		if (container && onEndScroll) {
 			onEndScroll({
-				internal: this.pressed,
+				external: !this.internal,
 			});
 		}
 
 		this.pressed = false;
 		this.started = false;
 		this.scrolling = false;
+		this.internal = false;
 
 		document.body.classList.remove('indiana-dragging');
 		this.forceUpdate();

@@ -1,5 +1,9 @@
 import { Ref, MouseEvent, Component, CSSProperties, ReactNode, ElementType } from 'react';
 
+interface ScrollEvent {
+	external: boolean;
+}
+
 export interface ScrollContainerProps {
 	vertical?: boolean;
 	horizontal?: boolean;
