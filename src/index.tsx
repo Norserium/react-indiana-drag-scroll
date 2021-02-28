@@ -20,7 +20,7 @@ const SCROLL_END_DEBOUNCE = 300;
 
 const LEFT_BUTTON = 0;
 
-interface ScrollEvent {
+export interface ScrollEvent {
 	external: boolean;
 }
 

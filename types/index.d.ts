@@ -1,6 +1,6 @@
 import { Ref, MouseEvent, Component, CSSProperties, ReactNode, ElementType } from 'react';
 
-interface ScrollEvent {
+export interface ScrollEvent {
 	external: boolean;
 }
 
