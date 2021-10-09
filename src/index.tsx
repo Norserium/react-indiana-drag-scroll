@@ -35,6 +35,7 @@ interface Props {
 	onEndScroll?: (event: ScrollEvent) => void;
 	onClick?: (event: MouseEvent) => void;
 	className?: string;
+	draggingClassName?: string;
 	style?: CSSProperties;
 	ignoreElements?: string;
 	nativeMobileScroll?: boolean;
@@ -355,12 +356,13 @@ export default class ScrollContainer extends PureComponent<Props> {
 	}
 
 	render() {
-		const { children, className, style, hideScrollbars, component: Component } = this.props;
+		const { children, draggingClassName, className, style, hideScrollbars, component: Component } = this.props;
 
 		return (
 			<Component
 				className={classnames(
 					className,
+					this.pressed && draggingClassName,
 					cn({
 						dragging: this.pressed,
 						'hide-scrollbars': hideScrollbars,

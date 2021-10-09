@@ -55,6 +55,7 @@ class Example extends Component {
 | onClick            | Function     | Invoked when user clicks the scrolling container without dragging                         |
 | component          | String       | The component used for the root node.                                                     | 'div'
 | className          | String       | The custom classname for the container                                                    |
+| draggingClassName  | String       | The classname for the container during dragging                                           |
 | style              | Number       | The custom styles for the container                                                       |
 | innerRef           | ElementType  | The ref to the root node (experimental alternative to `getElement`)                       |
 | ignoreElements     | String       | Selector for elements that should not trigger the scrolling behaviour (for example, `".modal, dialog"` or `"*[prevent-drag-scroll]"`) |

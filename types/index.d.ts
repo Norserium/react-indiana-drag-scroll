@@ -15,6 +15,7 @@ export interface ScrollContainerProps {
 	onEndScroll?: (event: ScrollEvent) => void;
 	onClick?: (event: MouseEvent) => void;
 	className?: string;
+	draggingClassName?: string;
 	style?: CSSProperties;
 	ignoreElements?: string;
 	nativeMobileScroll?: boolean;
