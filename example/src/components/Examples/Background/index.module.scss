@@ -1,0 +1,67 @@
+$sand-height: 245px;
+
+.root {
+	overflow: hidden;
+}
+
+.sand {
+	height: $sand-height;
+	width: 100%;
+	background: url('/img/sand.svg');
+	background-size: cover;
+	position: absolute;
+	bottom: 0;
+	border-top: solid 1px #EEE;
+}
+
+.objects {
+	position: absolute;
+	bottom: $sand-height;
+	width: 100%;
+	min-width: 1000px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.firstRock {
+	position: absolute;
+	left:  200px;
+	bottom: -70px;
+}
+
+.secondRock {
+	position: absolute;
+	left: -30px;
+	bottom: -30px;
+}
+
+
+.palm {
+	position: absolute;
+	left: 120px;
+	bottom: -30px;
+}
+
+.camel {
+	position: absolute;
+	left: 170px;
+	bottom: 0;
+}
+
+.firstPyramid {
+	position: absolute;
+	right: 270px;
+	bottom: -40px;
+}
+
+.secondPyramid {
+	position: absolute;
+	right: 120px;
+	bottom: -40px;
+}
+
+.thirdPyramid {
+	position: absolute;
+	right: 80px;
+	bottom: -40px;
+}

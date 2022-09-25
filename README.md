@@ -2,9 +2,9 @@
 
 > Implements scroll on drag
 
-[Examples](https://norserium.github.io/react-indiana-drag-scroll/) / [Sandbox](https://codesandbox.io/s/react-indiana-drag-scroll-default-iw9xh)
+[Examples](https://norserium.github.io/react-indiana-drag-scroll/) / [Documentation](https://norserium.github.io/react-indiana-drag-scroll/docs/intro) / [Sandbox](https://codesandbox.io/s/react-indiana-drag-scroll-default-iw9xh)
 
-[![NPM](https://img.shields.io/npm/v/react-indiana-drag-scroll.svg)](https://www.npmjs.com/package/react-indiana-drag-scroll) <a href="https://npmcharts.com/compare/react-indiana-drag-scroll?minimal=true"><img src="https://img.shields.io/npm/dm/react-indiana-drag-scroll.svg?sanitize=true" alt="Downloads"></a> [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-indiana-drag-scroll/next.svg)](https://www.npmjs.com/package/react-indiana-drag-scroll) <a href="https://npmcharts.com/compare/react-indiana-drag-scroll?minimal=true"><img src="https://img.shields.io/npm/dm/react-indiana-drag-scroll.svg?sanitize=true" alt="Downloads"></a> [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Welcome to journey!
 
@@ -12,68 +12,60 @@
 
 Try it yourself! Go to [demo website](https://norserium.github.io/react-indiana-drag-scroll/).
 
+
 ## Install
 
-```bash
-npm install --save react-indiana-drag-scroll
-```
+> :fire: You're currently looking at the branch for the alpha release.  If you're looking for the stable branch, [please check out `master` branch](https://github.com/Norserium/react-indiana-drag-scroll).
 
 ```bash
-yarn add react-indiana-drag-scroll
+npm install --save react-indiana-drag-scroll@next
+```
+
+```bashs
+yarn add react-indiana-drag-scroll@next
 ```
 
 ## Usage
 
 ```jsx
 import React, { Component } from 'react'
+import { ScrollContainer } from 'react-indiana-drag-scroll'
 
-import ScrollContainer from 'react-indiana-drag-scroll'
-
-class Example extends Component {
-  render () {
-    return (
-      <ScrollContainer className="scroll-container">
-        { ... }
+export const Example = () => {
+   return (
+      <ScrollContainer>
+         {/* scrollable content */}
       </ScrollContainer>
-    )
-  }
-}
+   )
+};
 ```
 
-## Component properties
+## Props
 
-| Prop               | Type         | Description                                                                               | Default |
+| Prop               | Type           | Description                                                                               | Default |
+| ------------------ | -------------- | ----------------------------------------------------------------------------------------- | ------- |
+| hideScrollbars     | `boolean`      | Hide the scrollbars                                                                       | `true`  |
+| children           | `ReactNode`    | The content of the scrolling container                                                    |
+| onScroll           | `() => void`   | Invoked when user scrolls the container                                                   |
+| onEndScroll        | `() => void`   | Invoked when scrolling is over completely                                                 |
+| onStartScroll      | `() => void`   | Invoked when scrolling starts                                                             |
+| component          | `ElementType`  | The component used for the root node.                                                     | `'div'`
+| className          | `string`       | The custom classname for the container                                                    |
+| style              | `CSSProperties`| The custom styles for the container                                                       |
+| ref                | `ElementType`  | The ref to the root node (experimental alternative to `getElement`)                       |
+| mouseScroll        | `Configuration`, `boolean` | The configuration of mouse scroll. The object's fields is described below    | `true`
+
+### `Configuration`
+
+| Field              | Type         | Description                                                                               | Default |
 | ------------------ | ------------ | ----------------------------------------------------------------------------------------- | ------- |
-| vertical           | Bool         | Allow vertical drag scrolling                                                             | true    |
-| horizontal         | Bool         | Allow horizontal drag scrolling                                                           | true    |
-| hideScrollbars     | Bool         | Hide the scrollbars                                                                       | true    |
+| rubberBand         | `boolean`    | The flag that indicates that rubber band effect should be enabled                         | true    |
+| inertia            | `boolean`    | The flag that indicates that inertial effect should be enabled                            | true    |
+| overscroll         | `boolean`    | The flag that indicates that overscroll effect should be enabled (experimental)           | false   |
+| cursor             | `boolean`    | The flag that indicates that cursor should be changed on drag                             | true    |
 | activationDistance | Number       | The distance that distinguish click and drag start                                        | 10      |
-| children           | Node         | The content of scrolling container                                                        |
-| onScroll           | Function     | Invoked when user scrolling container                                                     |
-| onEndScroll        | Function     | Invoked when user ends scrolling container                                                |
-| onStartScroll      | Function     | Invoked when user starts scrolling container                                              |
-| onClick            | Function     | Invoked when user clicks the scrolling container without dragging                         |
-| component          | String       | The component used for the root node.                                                     | 'div'
-| className          | String       | The custom classname for the container                                                    |
-| draggingClassName  | String       | The classname for the container during dragging                                           |
-| style              | Number       | The custom styles for the container                                                       |
-| innerRef           | ElementType  | The ref to the root node (experimental alternative to `getElement`)                       |
-| ignoreElements     | String       | Selector for elements that should not trigger the scrolling behaviour (for example, `".modal, dialog"` or `"*[prevent-drag-scroll]"`) |
-| nativeMobileScroll | Bool         | Use native mobile drag scroll for mobile devices                                          | true
-| buttons            | Array<Number>| The list of mouse button numbers that will activate the scroll by drag                    | [0]
-
-## Static functions
-
-| Name               | Returns     | Description                                                                            |
-| ------------------ | ----------- | -------------------------------------------------------------------------------------- |
-| getElement         | HTMLElement | Returns the HTML element                                                               |
-
-
-## FAQ
-
-### How to set the initial scroll?
-
-To set initial scroll you need get the ref to the root node of the `ScrollContainer`. It can be implemented by [using `innerRef`property](https://codesandbox.io/s/react-indiana-drag-scroll-initial-scroll-innerref-0g8v5?file=/index.js) or [the static function `getElement`](https://codesandbox.io/s/react-indiana-drag-scroll-initial-scroll-getelement-99o6q). At the worst you can use the [`ReactDOM.findDOMNode`](https://codesandbox.io/s/react-indiana-drag-scroll-initial-scroll-finddomnode-dvdop) method.
+| ignoreElements     | `string`     | Selector for elements that should not trigger the scrolling behaviour (for example, `".modal, dialog"` or `"*[prevent-drag-scroll]"`) |
+| buttons            | `number[]`   | The list of mouse button numbers that will activate the scroll by drag                    | [1]
 
 ## License
 

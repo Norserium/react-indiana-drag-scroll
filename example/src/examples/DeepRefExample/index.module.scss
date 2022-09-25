@@ -1,0 +1,8 @@
+.container {
+	cursor: grab;
+	:global(.simplebar-scrollbar) {
+		&:before {
+			background-color: white;
+		}
+	}
+}

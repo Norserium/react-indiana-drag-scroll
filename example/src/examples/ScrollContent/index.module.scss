@@ -1,0 +1,18 @@
+.root {
+	display: flex;
+}
+
+.element {
+	width: 145px;
+	height: 145px;
+	font-size: 48px;
+	font-weight: 600;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #E2D7C7;
+	&:nth-child(2n) {
+		background: #3e3e3e;
+	}
+}

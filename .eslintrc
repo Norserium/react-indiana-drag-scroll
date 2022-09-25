@@ -28,6 +28,9 @@
     "react/jsx-boolean-value": 0,
 
     // allow to miss the setting of explicit function return type
-    "@typescript-eslint/explicit-function-return-type": 0
+    "@typescript-eslint/explicit-function-return-type": 0,
+
+		// Disabled prop types (we use TypeScript):
+		"react/prop-types": 0
   }
 }

@@ -1,0 +1,47 @@
+.root {
+	height: 600px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.pages {
+	text-align: center;
+	opacity: 0.5;
+	transition:  0.5s;
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.exampleWrapper {
+	height: 430px;
+	display: flex;
+	align-items: center;
+}
+
+.page {
+	cursor: pointer;
+	font-weight: bold;
+	opacity: 0.5;
+	transition:  0.5s;
+	padding: 10px;
+}
+
+.pageActive {
+	opacity: 1;
+}
+
+.background {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+}

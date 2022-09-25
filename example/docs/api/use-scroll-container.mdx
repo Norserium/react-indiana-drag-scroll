@@ -1,0 +1,40 @@
+---
+title: useScrollContainer
+sidebar_position: 1
+---
+
+```tsx
+import { useScrollContainer } from 'react-indiana-drag-scroll';
+
+export const Example = () => {
+    const scrollContainer = useScrollContainer(options);
+    return (
+      <div ref={scrollContainer.ref}>
+        {/* scrollable content */}
+      </div>
+    )
+};
+```
+
+## Options
+
+| Field              | Type           | Description                                                                               | Default |
+| ------------------ | -------------- | ----------------------------------------------------------------------------------------- | ------- |
+| onScroll           | `() => void`   | Invoked when user scrolls the container                                                   |
+| onEndScroll        | `() => void`   | Invoked when scrolling is over completely                                                 |
+| onStartScroll      | `() => void`   | Invoked when scrolling starts                                                             |
+| mouseScroll        | `Configuration`, `boolean` | The configuration of mouse scroll. The object's fields is described below    | `true`
+
+### `Configuration`
+
+| Field              | Type         | Description                                                                               | Default |
+| ------------------ | ------------ | ----------------------------------------------------------------------------------------- | ------- |
+| rubberBand         | `boolean`    | The flag that indicates that rubber band effect should be enabled                         | true    |
+| inertia            | `boolean`    | The flag that indicates that inertial effect should be enabled                            | true    |
+| overscroll         | `boolean`    | The flag that indicates that overscroll effect should be enabled (experimental)           | false   |
+| cursor             | `boolean`    | The flag that indicates that cursor should be changed on drag                             | true    |
+| activationDistance | Number       | The distance that distinguish click and drag start                                        | 10      |
+| ignoreElements     | `string`     | Selector for elements that should not trigger the scrolling behaviour (for example, `".modal, dialog"` or `"*[prevent-drag-scroll]"`) |
+| buttons            | `number[]`   | The list of mouse button numbers that will activate the scroll by drag                    | [1]
+
+

@@ -8,6 +8,7 @@ import url from '@rollup/plugin-url';
 import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
+import { visualizer } from 'rollup-plugin-visualizer';
 import pkg from './package.json';
 
 export default {
@@ -27,12 +28,12 @@ export default {
 	plugins: [
 		external(),
 		postcss({
+			extract: 'style.css',
 			extensions: ['css', 'scss'],
 			use: {
 				sass: true,
 			},
 			plugins: [autoprefixer],
-			inject: true,
 		}),
 		url(),
 		babel({
@@ -41,8 +42,15 @@ export default {
 		}),
 		resolve(),
 		commonjs(),
-		terser(),
+		terser({
+			format: {
+				comments: false,
+			},
+		}),
 		typescript(),
+		visualizer({
+			gzipSize: true,
+		}),
 		replace({
 			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
 		}),

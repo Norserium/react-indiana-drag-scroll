@@ -1,0 +1,71 @@
+---
+sidebar_position: 3
+---
+
+# Migration
+
+## Breaking changes
+
+There are plenty of breaking changes between `2.x.x` and `3.x.x`, so read this document carefully before upgrade the library version.
+
+### Importing Styles
+
+The styles now should be imported explicitly:
+
+```tsx
+import 'react-indiana-drag-scroll/dist/style.css'
+```
+
+The styles is used to stylize `ScrollContainer`, they hides the scrollbars and sets the basic styles to the container:
+ ```css
+ overflow: auto;
+ cursor: grab;
+ ```
+
+### Moved props
+
+The props `activationDistance`, `ignoreElements`, `buttons` are passed as the fields of configuration object in the `mouseScroll` prop
+to emphasize that they affects only scroll by mouse drag.
+
+### Removed props
+
+#### `horizontal`
+
+The horizontal scroll is available until there is the vertical scroll. This prop added additional logic that contradicts to the library philosophy.
+
+If you need to disable horizontal scroll use the styles:
+```css
+overflow-x: hidden;
+```
+
+#### `vertical`
+
+The vertical scroll is available until there is the vertical scroll. This prop added additional logic that contradicts to the library philosophy.
+
+If you need to disable vertical scroll use the styles:
+```css
+overflow-y: hidden;
+```
+
+#### `draggingClassName`
+
+This prop is redundant. The user can add the additional class name by using the combination of `onStartScroll` and `onEndScroll`.
+
+#### `innerRef`
+
+This prop is redundant. Use `ref` instead.
+
+#### `onClick`
+
+This prop is redundant. You can create the wrapper for your content and `onClick` callback to it.
+
+#### `nativeMobileScroll`
+
+This props was removed because it contradicts the philosophy of the library. The mobile devices should always use
+the native scroll. It's impossible to make the scroll better than browsers do.
+
+### Removed static functions
+
+#### `getElement`
+
+This function is redundant. You can get direct access to the scroll container via `ref`.

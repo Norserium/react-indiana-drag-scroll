@@ -1,0 +1,80 @@
+---
+sidebar_position: 2
+---
+
+import { InitialScrollExample } from '../src/examples/InitialScrollExample';
+import { InputExample } from '../src/examples/InputExample';
+import { DeepRefExample } from '../src/examples/DeepRefExample';
+
+# Recipes
+
+## Initial Scroll
+
+The `ScrollContainer` uses `forwardRef` under the hood to set the passed ref to the root element. It is `div` block by default.
+Therefore to set the initial scroll you should just pass the ref and use it to scroll the container.
+
+
+<InitialScrollExample/>
+
+```tsx
+export const InitialScrollExample = () => {
+	const ref = useRef<HTMLElement>(null);
+
+	useEffect(() => {
+		ref.current?.scrollTo({
+			left: 1600,
+		});
+	}, []);
+
+	return (
+			<ScrollContainer ref={ref}>
+				{/* Content */}
+			</ScrollContainer>
+	);
+};
+```
+
+## Inputs
+
+If the container contains `<input/>`, `<textarea/>`, etc, user will lose the possibility to select the text inside them, because
+the cursor will be intercepted by the container.
+
+To bypass this limitation you can ignore specific element by their selector:
+
+<InputExample/>
+
+```tsx
+export const InputExample: FC = () => {
+	return (
+		<ScrollContainer mouseScroll={{	ignoreElements: 'input' }}>
+			{/* Content */}
+		</ScrollContainer>
+	);
+};
+```
+
+## Deep Ref
+
+There are situations, when you need to add the scroll by mouse dragging to a container
+that is inside some other component.
+
+There is the idea how to implement it with [`simplebar-react`](https://www.npmjs.com/package/simplebar-react):
+
+<DeepRefExample/>
+
+```tsx
+import React, { FC } from 'react';
+import { useScrollContainer } from 'react-indiana-drag-scroll';
+import SimpleBar from 'simplebar-react';
+import 'simplebar-react/dist/simplebar.min.css';
+
+export const DeepRefExample: FC = () => {
+	const { ref } = useScrollContainer();
+
+	return (
+		<SimpleBar scrollableNodeProps={{ ref }}>
+			{/* Content */}
+		</SimpleBar>
+	);
+};
+```

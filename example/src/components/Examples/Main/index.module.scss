@@ -1,0 +1,33 @@
+.root {
+	position: relative;
+	width: 430px;
+	height: 145px;
+}
+.container {
+	opacity: 1;
+	transition: opacity 0.5s;
+	padding-bottom: 90px;
+}
+
+.scrollContainer {
+	width: 430px;
+	height: 145px;
+	background: #282828;
+	border: solid 5px #E2D7C7;
+}
+
+.hieroglyphs {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	width: 900px;
+	justify-content: space-between;
+}
+.man {
+	position: absolute;
+	top: -9px;
+	left: 50%;
+	transform: translateX(-50%);
+	pointer-events: none;
+}

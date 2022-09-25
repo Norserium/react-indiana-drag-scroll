@@ -1,0 +1,10 @@
+.root {
+	user-select: none;
+	cursor: pointer;
+	opacity: 1;
+	transition: opacity 0.5s;
+}
+
+.hidden {
+	opacity: 0.2;
+}
