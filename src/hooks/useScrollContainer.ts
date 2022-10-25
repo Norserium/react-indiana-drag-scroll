@@ -66,7 +66,7 @@ export function useScrollContainer<Options>(
 	});
 
 	const [artificialScroll] = useState(
-		'mouseScrollImplementation' in props
+		'mouseScrollImplementation' in props && props.mouseScrollImplementation
 			? props.mouseScrollImplementation(reference, scrollSettings as RefObject<Options & BasicScrollOptions>)
 			: defaultMouseScrollImplementation(
 					reference,
