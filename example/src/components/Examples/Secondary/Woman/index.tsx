@@ -168,7 +168,7 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="M721 224c2-4.8 14-25.8 43.4-23.5 29.5 2.3 41.1 30.2 42.1 40.4 1.1 10.3 1.1 28.9 1.1 28.9"
@@ -180,7 +180,7 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="M934.3 747.9s15.4 26.4 24.5 34.4 17.1 10.3 17.1 10.3"
@@ -188,21 +188,21 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			<path d="M961.5 797.8s5.6-5.6 11.9-6.4 10.7 3.7 11.9 5.9.5 9 .5 9l-3.6 2.4s1.7-8.1.6-10.9-11.2-6.8-21.3 0z" />
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="M920.4 753.7s-1.7 1.1 0 2.4c1.7 1.4 7 11.8 7 11.8s-3.7 7.5-1.8 11.6c1.9 4 11.1 6.9 16.7 14s9.5 15.9 9.9 15.9c.5 0 3.5 5.5 17 3.5 13.5-1.9 16.5-6.6 16.5-6.6"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeMiterlimit="10"
 				d="M983.2 802.4s-13 8-20.1 5.9-8.2-5.3-11.4-11.7-16.7-14.3-20.7-18.1c-4-3.9-3.4-5.5-3.4-5.5"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="M723.2 224.8s-13.7 32.4-10.9 39c2.8 6.6 9 12.6 9 12.6"
@@ -220,7 +220,7 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			<path d="M758.6 316.6s.4 1.7 1 4.1c.6 2.5 1.3 5.8 1.8 9.2.3 1.7.5 3.4.7 4.9.1.8.1 1.6.2 2.3 0 .7.1 1.4.1 2.1 0 1.3.1 2.3 0 3.1v1.2-1.2c0-.7-.1-1.8-.2-3.1-.1-.6-.2-1.3-.3-2-.1-.7-.2-1.5-.4-2.2-.3-1.6-.6-3.2-1-4.8-.8-3.3-1.7-6.5-2.4-8.9-.7-2.4-1.3-4-1.3-4l1.8-.7zM779.9 251s0 .2.1.6c0 .4.1 1 .3 1.7.3 1.4.8 3.3 1.5 5 .4.9.8 1.8 1.2 2.5.2.4.4.8.7 1.1.2.3.4.7.6 1 .2.3.4.6.6.8.2.2.4.4.5.6.3.3.4.5.4.5l-.4.4-.5-.5c-.2-.2-.3-.3-.6-.5-.2-.2-.4-.5-.7-.8-.3-.3-.5-.6-.8-.9-.3-.3-.5-.7-.8-1.1-.5-.8-1-1.7-1.5-2.6-.9-1.8-1.6-3.7-2-5.2-.2-.7-.4-1.3-.5-1.8-.1-.4-.1-.7-.1-.7l2-.1z" />
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="M783.3 282.7s-1.9 6.3-6.9 15.8c-3.5 6.5-3 14.3 2.6 17.3s10.7 4.5 16 2.2c5.3-2.2 12.9-11.4 12.6-20-.2-8.6-1.9-15.8-5.8-21.6s-4.6-14.9-4.6-14.9"
@@ -233,7 +233,7 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeLinecap="round"
 				strokeLinejoin="round"
@@ -247,14 +247,14 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="1.284"
 				strokeMiterlimit="10"
 				d="M777.5 328.5c-2.2-9.6-2.5-17.4-2.5-17.4"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeMiterlimit="10"
 				d="M770.8 246.2s-5.1 35.1-10 51.2-10.5 24.2-14.7 28.3"
@@ -263,28 +263,28 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			<path d="M754.7 263.4c3.2.4 3.7-2.7 3.7-2.7-3.2 3.2-8.3-1-8.3-1s1.3 3.3 4.6 3.7z" />
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeMiterlimit="10"
 				d="M761.6 333.8s-6 .7-3.9 8.2c2.1 7.5 26.6 60.3 26.6 60.3M787.3 373s-1.8-26.1-5.1-34.7l-4.1-10.4"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeMiterlimit="10"
 				d="M777.8 328.4s.7-.8 6.6 2.9c5.9 3.7 21.5 17.2 21.5 17.2l-2.4.4c-2.4.4-9.6-6-12.6 0s-5.9 51.7-5.9 51.7"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeMiterlimit="10"
 				d="M789.8 353.5s.1-14.8-8.3-24M752.2 355.1s-1.1-6.1 1-13.2 7.7-8.1 7.7-8.1"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeLinecap="round"
 				strokeLinejoin="round"
@@ -293,7 +293,7 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeLinecap="round"
 				strokeLinejoin="round"
@@ -302,60 +302,60 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeMiterlimit="10"
 				d="M824.7 355.1s2.6-7.4 0-11.7c-2.6-4.3-2.8-3.1-2.8-3.1s-2.1 12.3-5.6 16.6c-3.4 4.3-4.9 12.4-7.7 18.2-2.8 5.8-33.1 38.3-47.9 45.8"
 			/>
-			<path fill="none" stroke="#000" strokeWidth="2" strokeMiterlimit="10" d="M819.8 358.9s9.2-5.9 14.1-10.4" />
+			<path fill="none" stroke="#332E2C" strokeWidth="2" strokeMiterlimit="10" d="M819.8 358.9s9.2-5.9 14.1-10.4" />
 			<path d="M804.6 358.9s2.1 1.6 4.1 3.3c1 .8 2 1.7 2.8 2.4l1.2 1.2-1.6 1.2s-.3-.5-.9-1.3c-.6-.8-1.4-1.8-2.2-2.8-1.6-2-3.4-4-3.4-4z" />
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="1.284"
 				strokeMiterlimit="10"
 				d="M815.7 345.8s-4.2 11.3-2.3 16.6"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeMiterlimit="10"
 				d="M777.5 408.4s-22.9-16.4-24.7-19.6c-1.7-3.2-3.6-3.6-4.7-4.1-1.1-.4-4.7-13.9-4.7-18.3s-.6-3.5-3.9-3.7c-3.2-.2-7.7.2-7.7.2"
 			/>
-			<path fill="none" stroke="#000" strokeWidth="2" strokeMiterlimit="10" d="M748.2 384.7s-1.9 2.1 0 3.2" />
+			<path fill="none" stroke="#332E2C" strokeWidth="2" strokeMiterlimit="10" d="M748.2 384.7s-1.9 2.1 0 3.2" />
 			<path d="M746.6 383.7v-.2c0-.1 0-.3.1-.5.1-.4.2-1 .5-1.7.2-.7.5-1.4.9-2.2l.6-1.2c.2-.4.5-.8.7-1.2 1-1.5 2.2-2.9 3.2-3.9s1.7-1.5 1.7-1.5-.6.6-1.4 1.7c-.8 1.1-1.8 2.6-2.5 4.1-.2.4-.4.8-.5 1.2-.2.4-.3.8-.4 1.2-.3.8-.4 1.5-.6 2.1-.1.6-.2 1.1-.2 1.5v.5l-2.1.1z" />
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="1.284"
 				strokeMiterlimit="10"
 				d="M746 357.4s-6.4 3.3-10.9 5M739 369.6s-2.2-.9-4.3-2.9"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeMiterlimit="10"
 				d="M737.6 370.8s-4-5.9-5.8-8c-1.8-2.2-2.1-3.2-4.5-2.5s-3.8 3.3-3.1 3.9c.6.6-1.4-.4-2.5.7-1 1.1-2.4 3-1.9 4s-1.4-.1-2.5 1.8-1 2.5-1.3 3.2c-.3.7-2.4 3.3-2.2 5 .2 1.7 2.6 2.2 2.6 2.2s19.5 9.2 22.6 11.1c3.1 1.8 4 4.6 4.9 5.6s2.6.8 4.3 2.8c1.6 2 17.9 16.3 17.9 16.3"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="1.284"
 				strokeMiterlimit="10"
 				d="M718.8 376.6s.6-3.8 3-3.8c0 0 1-2.2 2.9-3.2s2.6-1.3 2.6-1.3 2.6-3.3 3.4-3.4M727.3 368.3l3.9 2.4"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="M713.8 379s-6.1 2.7-3.5 6.3c2.6 3.6 13.5 16.9 14.4 20.6 0 0 8.2-4.2 12.1-5.9s5.3-4.7 5.3-4.7"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="M726.3 405.2s24 30.8 28.9 36.4 7.2 4 11.3 0c0 0 1.2-5.1 12.1-13.9 10.8-8.8 31.6-39.6 37.8-41.9 6.2-2.4 12.6-3.6 14.8-4.3 2.1-.6 5-7.8 4.9-8.5l-.2-.7s3.4-7.1 2.1-7.1h-1.3s3.1-9.7 1.6-10.1c-1.6-.4-2.3 0-2.3 0s2.4-4 2.7-5.7c.3-1.7-4.9-5.7-4.9-5.7"
@@ -367,29 +367,29 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			<path d="m777 327.5-.8 15.6 3.1-11.3z" />
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="1.284"
 				strokeMiterlimit="10"
 				d="M741.6 396.2s19.2 25.3 21.8 28.7"
 			/>
-			<path fill="none" stroke="#000" strokeWidth="2" strokeMiterlimit="10" d="m789 416.8 5.8 3.3 11.1-24" />
+			<path fill="none" stroke="#332E2C" strokeWidth="2" strokeMiterlimit="10" d="m789 416.8 5.8 3.3 11.1-24" />
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="M828.2 382.3s-22.3 56.9-24.8 59.3c-2.6 2.4-16.2-10.8-19.9-12.8l-3.7-2.1"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="m758.9 444.7 1.9 6.3s6.8-7.1 23.7-7.5 22.9 1.7 22.9 1.7-1.3-4 0-11.9"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="M762 450s4 14 5.2 19.6M805.9 444.8s-1.9 17.5 0 23.3"
@@ -408,7 +408,7 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			<path d="M784.9 511.8s.1 1 .3 2.5c.2 1.5.3 3.5.4 5.4.1 2 .2 3.9.1 5.4v2.5l-1.3.1s-.2-1-.3-2.5c-.1-1.5-.1-3.5 0-5.5s.3-4 .4-5.4c.3-1.6.4-2.5.4-2.5zM800.7 515.5s12-7.2 23.4-8.5l3.4 4.3c.1 0-11-3-26.8 4.2z" />
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="M778.7 537.5s2.4-1.8-1.4-8.3c-3.7-6.5-6.7-9-15.4-13.7-8-4.3-15.1-3.7-15.7-.7-.6 3 1.5 5.9 1.5 5.9"
@@ -416,7 +416,7 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			<path d="M751.2 512.4s-3.7.4-5 2.4c-1.3 1.9 1.5 5.9 1.5 5.9l3.5-8.3z" />
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="m824.6 514.1 17.9 36.1s2.3 6.4 6.8 18.8c6.8 18.8 20.7 49.2 23.3 53.7 2.6 4.5 4.7 13.5 7.9 22.7s18.6 40 23.1 50.1c4.5 10.1 30.6 52.4 30.6 52.4 1.1 2.6-1.5 5.1-6.6 7.5s-7.3-1.7-7.3-1.7-16.9-25-26.1-37.4c-9.2-12.4-28.8-51.7-28.8-51.7-1.9-9-16-23.9-19.3-33s-24.2-39.1-31.4-52.1c-7.3-13.2-25-46.2-25-46.2"
@@ -428,7 +428,7 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			<path d="m789.6 533.5 4.1 6.9s-4.4-.1-4.6-2.1c-.1-2 .5-4.8.5-4.8zM829.3 523.6s1.3-2.4.3-4.4c-1-2-4.4-5-4.4-5l4.1 9.4zM775.1 517.3s7.8 5.8 8.8 11.4c1.1 5.5 0 9.5-2.9 10.3-1.5.4-3.4 0-3.4 0l1.9-2.1s2.2.2 2.6-2.3c.5-2.4 1.6-7.2-7-17.3zM758.8 507.9s-7.5-1.5-10.3.7c-2.8 2.1-3 3.7-3.2 6.9l1.4 4.9s-3.7-1.7-4.2-5.5c-.6-4.6 2.2-9.2 6-10.2 3.9-1.1 10.3 3.2 10.3 3.2zM764.6 475.4s15.5-3.3 31.8-.8c0 0-7.5-.4-12.1-.1 0 0-18.5 2-20 4.2l.3-3.3z" />
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="M779.3 535.5s-41.2 81.9-47.2 92.8c0 0-6 17.3-9.2 22.2 0 0-36.9 81.3-42.9 94.8 0 0-5.6 1.9-11.6 0s-3.9-3.9-3.9-3.9 35.2-91.8 35.9-97.3-.2-10.5.9-13.5 4.7-4.1 5.6-7.7 18.2-46 24-63.1c5.8-17.1 19.6-45.7 19.6-45.7"
@@ -436,7 +436,7 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			<path fill="#774B3D" d="M710.1 641.2s.9 2.1 0 2.6c0 0 5.8-4.6 6.6-8.6 0-.1-4.5 4.7-6.6 6z" />
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="M664.6 741.5s-3.9.2-3.6 2c.3 1.8-5 17.2-7.2 21.2S639 786.4 639 786.4"
@@ -444,7 +444,7 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			<path d="M646.4 787.6s-8.5-4.3-13.5-3.2c-5 1.1-8.1 4.2-9.2 8.1-1.4 5.1 2.8 7.4 3.8 7.8l2.2-1.5s-2.5-3-2.4-6.3c0-3.3 4.2-5.4 8-5.6 3.9-.1 11.1.7 11.1.7z" />
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeLinecap="round"
 				strokeLinejoin="round"
@@ -453,7 +453,7 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeLinecap="round"
 				strokeLinejoin="round"
@@ -462,21 +462,21 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="M628.1 798s-.8 2.9 10.1 5.5 15.7 0 15.7 0c9.2-14.8 17.5-24.5 19.9-26s.5-10.5 1.9-18 5.5-13.3 5.5-13.3"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeMiterlimit="10"
 				d="M627.3 796.3s13.4 3.3 17.4 3.8c4 .5 5.5 0 8.7-3.2s14-18.8 18.2-22.1M929.4 754.5s23.3 26.1 26 30.7c2.7 4.7 3.7 12.2 3.7 12.2"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeLinecap="round"
 				strokeLinejoin="round"
@@ -485,14 +485,14 @@ export const Woman: FC<ManProps> = ({ className }) => {
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="2"
 				strokeMiterlimit="10"
 				d="M940 761.4s-2.8 11.4-5.6 10c-5-2.5 5.6-10 5.6-10zM941 761.4s8.7 3.9 9.8 1c1.1-2.9-9.8-1-9.8-1z"
 			/>
 			<path
 				fill="none"
-				stroke="#000"
+				stroke="#332E2C"
 				strokeWidth="3"
 				strokeMiterlimit="10"
 				d="M808 293.6s7.3-4.7 4.7-16.3c-2.6-11.6-39.8-30.4-55.6-37.9-15.8-7.5-58.4-30.6-68.9-3.6-6.5 16.7 27.7 35 27.7 35M749.3 506.4s8.7-13.5 11.8-20.1c3.1-6.6 4.9-15.7 4.9-15.7s10.8-6.3 41.4-2.5c0 0 10 28.8 17.2 39.7 0 0 1.5.3 4.1 3.2 4.1 4.5.9 13.2.9 13.2s2.1-6.2-3.8-9.6c-4.7-2.8-29.4 3.3-35.6 17.5-4.2 9.5 3.3 8.3 3.3 8.3"

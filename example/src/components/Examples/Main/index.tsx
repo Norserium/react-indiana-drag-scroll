@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { ScrollContainer } from 'react-indiana-drag-scroll';
 import { HieroglyphWrapper } from './HieroglyphWrapper';
 import styles from './index.module.scss';
