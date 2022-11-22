@@ -1,0 +1,18 @@
+.root {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	margin-top: 48px;
+	margin-bottom: 24px;
+	&:before, &:after {
+		content: "";
+		height: 1px;
+		flex-grow: 1;
+		background-color: var(--ifm-color-secondary-dark);
+	}
+}
+
+.text {
+	font-size: 18px;
+	margin: 0 32px;
+}
