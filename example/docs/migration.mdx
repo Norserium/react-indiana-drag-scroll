@@ -18,8 +18,24 @@ import 'react-indiana-drag-scroll/dist/style.css'
 
 The styles is used to stylize `ScrollContainer`, they hides the scrollbars and sets the basic styles to the container:
  ```css
- overflow: auto;
- cursor: grab;
+.indiana-scroll-container {
+	overflow: auto;
+	cursor: grab;
+}
+
+.indiana-scroll-container--hide-scrollbars {
+	overflow: -moz-scrollbars-none;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.indiana-scroll-container--hide-scrollbars::-webkit-scrollbar {
+	display: none !important;
+	height: 0 !important;
+	width: 0 !important;
+	background: transparent !important;
+	-webkit-appearance: none !important;
+}
  ```
 
 ### Moved props
