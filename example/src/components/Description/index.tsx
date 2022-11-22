@@ -59,8 +59,8 @@ export const Description: FC = () => {
 
 				<div className={styles.caption}>
 					<p>
-						But you should notice that you need to hide the scrollbars and set overflow value by yourself in
-						this case.
+						But you should notice that you need to hide the scrollbars and set the overflow value by
+						yourself in this case.
 					</p>
 				</div>
 
