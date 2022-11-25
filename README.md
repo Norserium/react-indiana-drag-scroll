@@ -2,7 +2,7 @@
 
 > Implements scroll on drag
 
-[Examples](https://norserium.github.io/react-indiana-drag-scroll/) / [Documentation](https://norserium.github.io/react-indiana-drag-scroll/docs/intro) / [Sandbox](https://codesandbox.io/s/react-indiana-drag-scroll-default-iw9xh)
+[Examples](https://norserium.github.io/react-indiana-drag-scroll/) / [Documentation](https://norserium.github.io/react-indiana-drag-scroll/docs/intro) / [Sandbox](https://codesandbox.io/s/react-indiana-drag-scroll-v-3-e8g0tq?file=/src/index.tsx)
 
 [![NPM](https://img.shields.io/npm/v/react-indiana-drag-scroll/next.svg)](https://www.npmjs.com/package/react-indiana-drag-scroll) <a href="https://npmcharts.com/compare/react-indiana-drag-scroll?minimal=true"><img src="https://img.shields.io/npm/dm/react-indiana-drag-scroll.svg?sanitize=true" alt="Downloads"></a> [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
