@@ -27,6 +27,9 @@ const Body = <Options extends object = DefaultScrollOptions>(
 		hideScrollbars = true,
 		mouseScroll = true,
 		mouseScrollImplementation,
+		onStartScroll,
+		onEndScroll,
+		onScroll,
 		...additionalProps
 	} = { mouseScrollImplementation: undefined, ...props };
 
@@ -35,6 +38,9 @@ const Body = <Options extends object = DefaultScrollOptions>(
 	const scrollContainer = useScrollContainer({
 		mouseScroll,
 		mouseScrollImplementation,
+		onStartScroll,
+		onEndScroll,
+		onScroll,
 	});
 
 	return (
