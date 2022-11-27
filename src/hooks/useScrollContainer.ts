@@ -12,8 +12,8 @@ import {
 import { defaultMouseScrollImplementation } from '../core/DefaultArtificialScroll';
 
 interface OriginalStyles {
-	body: CSSProperties;
-	reference: CSSProperties;
+	body: Partial<CSSStyleDeclaration>;
+	reference: Partial<CSSStyleDeclaration>;
 }
 
 export function useScrollContainer<Options>(
@@ -129,6 +129,10 @@ export function useScrollContainer<Options>(
 					reference.current.style.cursor = 'grabbing';
 				}
 			}
+			if (reference.current) {
+				originalStyles.current.reference.userSelect = reference.current.style.userSelect;
+				reference.current.style.userSelect = 'none';
+			}
 		}
 	};
 
@@ -203,6 +207,9 @@ export function useScrollContainer<Options>(
 			if (reference.current) {
 				reference.current.style.cursor = originalStyles.current.reference.cursor || '';
 			}
+		}
+		if (reference.current) {
+			reference.current.style.userSelect = originalStyles.current.reference.userSelect || '';
 		}
 	};
 
