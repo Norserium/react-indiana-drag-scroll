@@ -27,9 +27,12 @@ yarn add react-indiana-drag-scroll@next
 
 ## Usage
 
+You can use the `ScrollContainer` component:
+
 ```jsx
 import React, { Component } from 'react'
-import { ScrollContainer } from 'react-indiana-drag-scroll'
+import { ScrollContainer } from 'react-indiana-drag-scroll';
+import 'react-indiana-drag-scroll/dist/style.css'
 
 export const Example = () => {
    return (
@@ -39,6 +42,23 @@ export const Example = () => {
    )
 };
 ```
+
+Or, if you need to get more flexibility you can use `useScrollContainer` hook:
+```jsx
+import { useScrollContainer } from 'react-indiana-drag-scroll';
+
+export const Example = () => {
+    const scrollContainer = useScrollContainer(options);
+    return (
+      <div ref={scrollContainer.ref}>
+        {/* scrollable content */}
+      </div>
+    )
+};
+```
+
+In this case you should provide the corresponding styles by yourself (for example, `overflow: auto`).
+
 
 ## Props
 

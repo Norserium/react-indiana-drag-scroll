@@ -51,7 +51,7 @@ export const Description: FC = () => {
 				<div className={styles.caption}>
 					<p>
 						Also, you can use the hook{' '}
-						<Link to={'/docs/api/use-scroll-container/'}>useDraggableScroll</Link> to make an arbitrary
+						<Link to={'/docs/api/use-scroll-container/'}>useScrollContainer</Link> to make an arbitrary
 						element draggable by a mouse.
 					</p>
 				</div>
